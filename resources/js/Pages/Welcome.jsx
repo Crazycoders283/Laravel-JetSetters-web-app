@@ -1,6 +1,7 @@
 import { Head, Link } from '@inertiajs/react';
 import Header from './Frontend/Header/header';
 import Banner from './Frontend/Banner/Banner';
+import Login from './Frontend/login/login';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -19,6 +20,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             <Head title="Welcome" />
             <Header />
             <Banner />
+            <Footer />
+            <Login />
+            
             
 
 
