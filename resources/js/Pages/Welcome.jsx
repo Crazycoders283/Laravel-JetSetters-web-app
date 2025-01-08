@@ -1,7 +1,7 @@
 import { Head } from '@inertiajs/react';
 import Header from 'resources/js/Pages/src/components/Common/Header/Header';
 import Banner from './src/components/Banner/Banner';
-import Footer from 'resources/js/Pages/src/components/Common/Footer';
+import Footer from 'resources/js/Pages/src/components/Common/Footer/Footer';
 import Home from 'resources/js/Pages/src/pages/Home/Home';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
