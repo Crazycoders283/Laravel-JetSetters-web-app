@@ -1,0 +1,221 @@
+/* Slider Section */
+.slider {
+  position: relative;
+  z-index: 99; /* Ensures slider appears above other elements */
+}
+
+.slider .carousel {
+  position: relative;
+}
+
+/* Slider Overlay */
+.slider .carousel::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6); /* Adds a dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Caption Styles */
+.slider .carousel .carousel-item .carousel-caption {
+  z-index: 9;
+  bottom: 20%; /* Adjusts caption position */
+  left: 8%;
+  text-align: left;
+}
+
+/* Caption Text */
+.slider .carousel .carousel-item .carousel-caption .slider_des p.heading {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Waterbrush", cursive;
+  font-style: italic;
+  margin: 10px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Font Style for Our Cheapest Cruise Ship */
+.slider .carousel .carousel-item .carousel-caption .slider_des h2.sub_text {
+  font-size: 86px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500; /* Medium weight */
+  margin-bottom: 10px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Bar Section - Horizontal Layout */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Max width for responsiveness */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+/* Filter Item - Horizontal */
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-item p {
+  font-size: 12px;
+  color: #c1c1c1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.filter-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Divider - Thin Vertical Line */
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon Styles */
+.icon {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Search Button */
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Book Now Button */
+.book-now-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.book-now-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+
+/* Tablets */
+@media only screen and (max-width: 991px) {
+  .slider .carousel .carousel-item .carousel-caption {
+    bottom: 15%;
+    left: 5%;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption .slider_des h2.sub_text {
+    font-size: 50px; /* Adjust for tablets */
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+  .slider .carousel .carousel-item img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption {
+    bottom: 10%;
+    left: 5%;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption .slider_des h2.sub_text {
+    font-size: 40px; /* Adjust for smaller screens */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width for small screens */
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    overflow-x: scroll; /* Horizontal scroll for smaller screens */
+  }
+
+  .search-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile Screens */
+@media only screen and (max-width: 420px) {
+  .slider .carousel .carousel-item img {
+    height: 300px;
+  }
+
+  .slider .carousel .carousel-item .carousel-caption .slider_des h2.sub_text {
+    font-size: 30px; /* Adjust for small screens */
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    overflow-x: scroll; /* Scrollable on smaller screens */
+  }
+
+  .filter-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
