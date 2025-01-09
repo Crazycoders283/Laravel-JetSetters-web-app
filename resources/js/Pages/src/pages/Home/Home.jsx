@@ -12,7 +12,7 @@ const destinations = [
     id: 1,
     name: "Vancouver BC",
     price: "$64/p",
-    image: "https://images.hdqwalls.com/download/vancouver-city-night-3840x2160.jpg", // Replace with actual image URLs
+    image: "https://images.hdqwalls.com/download/vancouver-city-night-3840x2160.jpg",
     rating: "5.0",
   },
   {
@@ -29,25 +29,43 @@ const destinations = [
     image: "https://media.timeout.com/images/105496849/image.jpg",
     rating: "5.0",
   },
+  // Add other destination data...
+];
+
+const cruises = [
+  {
+    id: 1,
+    name: "Celebrity Cruiseline",
+    price: "$96/p",
+    image: "https://example.com/image1.jpg", // Replace with the actual URL
+    rating: "5.0",
+  },
+  {
+    id: 2,
+    name: "Carnival",
+    price: "$127/p",
+    image: "https://example.com/image2.jpg", // Replace with the actual URL
+    rating: "5.0",
+  },
+  {
+    id: 3,
+    name: "Disney Cruiseline",
+    price: "$77/p",
+    image: "https://example.com/image3.jpg", // Replace with the actual URL
+    rating: "5.0",
+  },
   {
     id: 4,
-    name: "San Diego",
-    price: "$77/p",
-    image: "https://media.timeout.com/images/105496849/image.jpg",
+    name: "Cunard",
+    price: "$96/p",
+    image: "https://example.com/image4.jpg", // Replace with the actual URL
     rating: "5.0",
   },
   {
     id: 5,
-    name: "New York",
-    price: "$96/p",
-    image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
-    rating: "5.0",
-  },
-  {
-    id: 6,
-    name: "Los Angeles",
-    price: "$127/p",
-    image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
+    name: "Norwegian Cruiseline",
+    price: "$3127/p",
+    image: "https://example.com/image5.jpg", // Replace with the actual URL
     rating: "5.0",
   },
 ];
@@ -58,7 +76,7 @@ const Home = () => {
       <Banner />
       <Features />
 
-      {/* Tour Section */}
+      {/* Destination Section */}
       <section className="popular py-5">
         <Container>
           <Row>
@@ -71,10 +89,26 @@ const Home = () => {
               </div>
             </Col>
           </Row>
-          <Cards destinations={destinations} />
+          <Cards data={destinations} />
         </Container>
       </section>
-      
+
+      {/* Cruise Section */}
+      <section className="popular py-5">
+        <Container>
+          <Row>
+            <Col md="12">
+              <div className="main_heading text-center">
+                <h1>Explore By Cruise Line</h1>
+                <p className="subtitle">
+                  Find the perfect cruise experience tailored for you
+                </p>
+              </div>
+            </Col>
+          </Row>
+          <Cards data={cruises} />
+        </Container>
+      </section>
 
       {/* Cruise Deals Section */}
       <CruiseDeals />

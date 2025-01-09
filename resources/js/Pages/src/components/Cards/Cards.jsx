@@ -1,27 +1,24 @@
 import React from "react";
+import { Card, Button, Row, Col } from "react-bootstrap";
 import "../Cards/card.css";
 
-const Cards = ({ destinations }) => {
+const Cards = ({ data }) => {
   return (
-    <div className="card-grid">
-      {destinations.map((destination) => (
-        <div className="card" key={destination.id}>
-          <img
-            src={destination.image}
-            alt={destination.name}
-            className="card-image"
-          />
-          <div className="card-content">
-            <div className="card-header">
-              <h3>{destination.name}</h3>
-              <span className="rating">⭐ {destination.rating}</span>
-            </div>
-            <p>Starts from {destination.price}</p>
-            <button className="book-button">Book Now</button>
-          </div>
-        </div>
+    <Row>
+      {data.map((item) => (
+        <Col key={item.id} sm={12} md={6} lg={4} className="mb-4">
+          <Card className="custom-card">
+            <Card.Img variant="top" src={item.image} alt={item.name} />
+            <Card.Body>
+              <Card.Title>{item.name}</Card.Title>
+              <Card.Text>Starts from {item.price}</Card.Text>
+              <div className="rating">⭐ {item.rating}</div>
+              <Button variant="primary">Book Now</Button>
+            </Card.Body>
+          </Card>
+        </Col>
       ))}
-    </div>
+    </Row>
   );
 };
 
