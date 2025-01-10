@@ -1,92 +1,96 @@
+/* Main container and grid styling */
+.main-container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  gap: 20px;
 }
 
+/* Card styling */
 .card {
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 392px; /* Card width */
+  height: 501.75px; /* Card height */
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container and badge */
+.image-container {
+  position: relative;
 }
 
 .card-image {
-  width: 100%;
-  height: 200px;
+  width: 392px; /* Image width */
+  height: 311px; /* Image height */
   object-fit: cover;
 }
 
-.card-content {
-  padding: 20px;
+.rating-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 204, 0, 0.9);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Card body styling */
+.card-body {
+  padding: 15px;
   text-align: center;
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.card-header h3 {
+.card-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #333333;
+  margin-bottom: 10px;
 }
 
-.rating {
-  background-color: #ff9900;
-  color: #ffffff;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: bold;
-}
-
-p {
+.card-description {
   font-size: 1rem;
-  color: #555555;
-  margin: 15px 0;
+  color: #777777;
+  margin-bottom: 15px;
 }
 
+/* Updated Button Styling */
 .book-button {
-  background: #007bff;
-  color: #ffffff;
+  background: none;
+  color: #007bff;
   border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
+  padding: 10px 0;
   font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Adds space between text and underline */
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .book-button:hover {
-  background: #0056b3;
-}
-
-.subtitle {
-  color: #777777;
-  font-size: 1rem;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-
-.main_heading h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333333;
-}
-
-.main_heading {
-  margin-bottom: 30px;
+  color: #0056b3;
 }
