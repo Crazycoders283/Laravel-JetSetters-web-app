@@ -74,7 +74,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <Features />
+      
 
       {/* Destination Section */}
       <section className="popular py-5">
