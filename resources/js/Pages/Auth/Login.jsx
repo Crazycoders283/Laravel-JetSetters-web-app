@@ -5,6 +5,7 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
+import '../src/components/AdvanceSearch/login.css'
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -22,10 +23,10 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
+        <div>
             <Head title="Log in" />
 
-            {status && (
+            {/* {status && (
                 <div className="mb-4 text-sm font-medium text-green-600">
                     {status}
                 </div>
@@ -81,20 +82,98 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="mt-4 flex items-center justify-end">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
+                    
 
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Log in
                     </PrimaryButton>
                 </div>
-            </form>
-        </GuestLayout>
+            </form> */}
+
+             <div className="login-container">
+      <div className="login-card">
+        {/* Image Section */}
+        <div
+          className="login-image"
+          style={{
+            backgroundImage: `url('http://www.gerardgorman.com/uploads/1/7/8/0/17808/1a_orig.jpeg')`,
+          }}
+        ></div>
+
+        {/* Login Form Section */}
+        <div className="login-content">
+          <h2 className="login-title">Login</h2>
+          <form className="login-form"  onSubmit={submit}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+                                <input
+                                    
+                        value={data.email}
+                                    type="email"
+                                      onChange={(e) => setData('email', e.target.value)}
+                id="email"
+                placeholder="username@gmail.com"
+                className="form-input"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                                    type="password"
+                                     value={data.password}
+                onChange={(e) => setData('password', e.target.value)}
+                id="password"
+                placeholder="Password"
+                className="form-input"
+                
+                
+              />
+            </div>
+            <div className="form-options">
+              <label className="remember-me">
+                <input type="checkbox" />
+                Remember Me
+                                </label>
+                                {canResetPassword && (
+                        <Link
+                            href={route('password.request')}
+                           className="forgot-password"
+                                    >
+                            Forgot your password?
+                        </Link>
+                    )}
+            </div>
+            <button className="login-button">Sign In</button>
+            <div className="login-divider">or continue with</div>
+            <div className="social-login">
+              <button className="social-button">
+                <img
+                  src="https://img.icons8.com/color/48/google-logo.png"
+                  alt="Google"
+                />
+              </button>
+              <button className="social-button">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/facebook-new.png"
+                  alt="Facebook"
+                />
+              </button>
+              <button className="social-button">
+                <img
+                  src="https://img.icons8.com/?size=100&id=60688&format=png&color=000000"
+                  alt="Email"
+                />
+              </button>
+            </div>
+          </form>
+          <p className="login-footer">
+            By proceeding, you agree to our Privacy Policy and Terms of Service.
+          </p>
+        </div>
+      </div>
+    </div> 
+
+
+        </div>
     );
 }
