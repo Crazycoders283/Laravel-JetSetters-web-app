@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom"; // React Router for navigation
 import "../Header/header.css"; // Import external CSS for styling
+import { Link } from "@inertiajs/react";
 
 // Header functional component
 const Header = () => {
@@ -73,9 +74,9 @@ const Header = () => {
             
           {/* Right-side buttons */}
           <div className="ms-md-4 ms-2"> {/* Margin for responsive spacing */}
-          <NavLink className="primaryBtn modernBtn d-none d-sm-inline-block"> 
-  Login / SignUp
-</NavLink>
+            <Link className="primaryBtn modernBtn d-none d-sm-inline-block"  href={route('login')}>
+              Login / SignUp 
+            </Link>
 
             
             <li className="d-inline-block d-lg-none ms-3 toggle_btn"> {/* Toggle button for small screens */}
