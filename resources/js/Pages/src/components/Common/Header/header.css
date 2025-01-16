@@ -102,7 +102,7 @@ header .navbar .offcanvas-body a:hover::after {
   .offcanvas-body .nav-link {
     padding: 12px 10px;
     margin: 5px 0;
-    color: var(--black);
+    color: whi;
   }
 }
 /* Button styles */
