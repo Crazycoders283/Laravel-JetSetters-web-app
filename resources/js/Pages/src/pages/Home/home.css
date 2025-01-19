@@ -240,3 +240,30 @@
     height: 50px;
   }
 }
+.explore-more-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px; /* Adds space above the button */
+}
+
+.explore-more-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 13.8px;
+  font-weight: 600; /* Semi-bold weight */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer;
+  width: 148px; /* Set the width */
+  height: 49px; /* Set the height */
+  text-transform: capitalize; /* Capitalize text */
+  transition: background-color 0.3s ease;
+  margin-bottom: 12px; /* Space below the button */
+}
+
+.explore-more-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+

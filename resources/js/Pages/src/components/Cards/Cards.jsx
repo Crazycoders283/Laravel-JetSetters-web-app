@@ -31,7 +31,7 @@ const cardsData = [
 const App = () => {
   return (
     <div className="main-container">
-      <h1 className="heading">Our Cruises</h1>
+      
       <div className="card-grid">
         {cardsData.map((card) => (
           <div className="card" key={card.id}>

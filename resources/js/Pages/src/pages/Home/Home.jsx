@@ -92,6 +92,11 @@ const Home = () => {
           <Cards data={destinations} />
         </Container>
       </section>
+      <div className="explore-more-container">
+              <button className="explore-more-btn">Explore More</button>
+            </div>
+          
+
 
       {/* Cruise Section */}
       <section className="popular py-5">
@@ -109,6 +114,10 @@ const Home = () => {
           <Cards data={cruises} />
         </Container>
       </section>
+      <div className="explore-more-container">
+              <button className="explore-more-btn">Explore More</button>
+            </div>
+          
 
       {/* Cruise Deals Section */}
       <CruiseDeals />

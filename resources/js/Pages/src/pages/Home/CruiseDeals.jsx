@@ -13,8 +13,12 @@ const CruiseDeals = () => {
             className="email-input"
             placeholder="Enter Your Email Address"
           />
-          <button className="email-submit">
-            <i className="fas fa-paper-plane"></i> {/* Rocket replaced with paper plane */}
+          <button className="email-submit-btn">
+            <img
+              src="/path/to/send-icon.png"
+              alt="Send"
+              className="send-icon"
+            />
           </button>
         </div>
       </div>
