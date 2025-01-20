@@ -53,7 +53,7 @@ const Header = () => {
             show={open} // Controls visibility of the Offcanvas
           >
             {/* Mobile Logo Section */}
-            <Offcanvas.Header> 
+            <Offcanvas.Header>
               <h1 className="logo">Jet Setters</h1> {/* Heading for mobile logo */}
               <span className="navbar-toggler ms-auto" onClick={toggleMenu}> {/* Toggle button for Offcanvas */}
               </span>
@@ -62,7 +62,7 @@ const Header = () => {
 
             {/* Navigation links inside Offcanvas */}
             <Offcanvas.Body>
-            <Nav className="justify-content-center flex-grow-1 pe-3"> {/* Align links to the center */}
+              <Nav className="justify-content-center flex-grow-1 pe-3"> {/* Align links to the center */}
                 <NavLink className="nav-link" to="/">Cruise</NavLink>
                 <NavLink className="nav-link" to="/">Flights</NavLink>
                 <NavLink className="nav-link" to="/">Packages</NavLink>
@@ -71,14 +71,14 @@ const Header = () => {
             </Offcanvas.Body>
           </Navbar.Offcanvas>
 
-            
+
           {/* Right-side buttons */}
           <div className="ms-md-4 ms-2"> {/* Margin for responsive spacing */}
-            <Link className="primaryBtn modernBtn d-none d-sm-inline-block"  href={route('login')}>
-              Login / SignUp 
+            <Link className="primaryBtn modernBtn d-none d-sm-inline-block" href={route('login')}>
+              Login / SignUp
             </Link>
 
-            
+
             <li className="d-inline-block d-lg-none ms-3 toggle_btn"> {/* Toggle button for small screens */}
               <i className={open ? "bi bi-x-lg" : "bi bi-list"} onClick={toggleMenu}></i>
             </li>
