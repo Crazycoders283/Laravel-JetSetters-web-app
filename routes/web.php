@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingNowController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -14,6 +16,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/booking', [BookingController::class, 'index'])->name('booking_index');
+Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -24,4 +28,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Itinerary.css";
+import "./Itinerary.css";
 
 const Itinerary = () => {
   const [itineraryData, setItineraryData] = useState([]);
@@ -61,13 +61,13 @@ const Itinerary = () => {
   }
 
   return (
-<div className="itinerary-wrapper">
-  {/* Header */}
-  <div className="itinerary-header">
-    <h3 className="itinerary-title">Itinerary</h3>
-    <p className="itinerary-description">Day-wise details of your package</p>
-    <hr className="header-separator" />
-  </div>
+    <div className="itinerary-wrapper">
+      {/* Header */}
+      <div className="itinerary-header">
+        <h3 className="itinerary-title">Itinerary</h3>
+        <p className="itinerary-description">Day-wise details of your package</p>
+        <hr className="header-separator" />
+      </div>
 
 
 

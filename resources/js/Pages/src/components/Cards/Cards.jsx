@@ -1,6 +1,6 @@
 import React from "react";
 import "../Cards/card.css";
-
+import { Head, Link, useForm } from '@inertiajs/react';
 const cardsData = [
   {
     id: 1,
@@ -31,7 +31,7 @@ const cardsData = [
 const App = () => {
   return (
     <div className="main-container">
-      
+
       <div className="card-grid">
         {cardsData.map((card) => (
           <div className="card" key={card.id}>
@@ -44,7 +44,7 @@ const App = () => {
             <div className="card-body">
               <h3 className="card-title">{card.title}</h3>
               <p className="card-description">{card.description}</p>
-              <button className="book-button">{card.buttonText}</button>
+              <button className="book-button"><Link href={route('booking_index')}>{card.buttonText}</Link></button>
             </div>
           </div>
         ))}

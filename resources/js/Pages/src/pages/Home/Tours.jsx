@@ -262,7 +262,9 @@ export default Tours;*/
 import React, { useState, useEffect } from "react";
 import Itinerary from "./Itinerary";
 import ItineraryReviewsPage from "./ItineraryReviewsPage"; // Import the file
-import "../styles/Tour.css"; // CSS file for styling
+import "./Tour.css"; // CSS file for styling
+// import { Link } from "react-router-dom";
+import { Head, Link, useForm } from '@inertiajs/react';
 
 const Tours = () => {
   const [tours, setTours] = useState([]);
@@ -393,8 +395,9 @@ const Tours = () => {
                   </div>
                   <button
                     className="book-now-btn"
-                    onClick={() => handleBookNow(index)}
+
                   >
+                    <Link href={route('booking_now')}></Link>
                     BOOK NOW
                   </button>
                 </div>
