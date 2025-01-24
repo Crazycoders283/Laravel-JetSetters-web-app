@@ -34,7 +34,7 @@
 
 /* Header styles */
 header {
-  position: absolute;
+  position: fixed;
   top: 2;
   left: 12;
   z-index: 999;

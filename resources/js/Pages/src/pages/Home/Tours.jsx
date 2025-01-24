@@ -258,13 +258,13 @@ export default Tours;*/
 //for Api fecthing css styles
 
 
-
 import React, { useState, useEffect } from "react";
 import Itinerary from "./Itinerary";
 import ItineraryReviewsPage from "./ItineraryReviewsPage"; // Import the file
 import "./Tour.css"; // CSS file for styling
-// import { Link } from "react-router-dom";
 import { Head, Link, useForm } from '@inertiajs/react';
+import Header from "../../components/Common/Header/Header"; // Importing Header component
+import Footer from "../../components/Common/Footer/Footer";
 
 const Tours = () => {
   const [tours, setTours] = useState([]);
@@ -348,73 +348,79 @@ const Tours = () => {
   if (loading) return <div className="loading">Loading...</div>;
 
   return (
-    <div className="tours-page">
-      <h1 className="page-title">Our Tours</h1>
-      {error && <p className="error">Error: {error}</p>}
-      {tours.map((tour, index) => (
-        <div key={index} className="tour-section">
-          {/* Details Section */}
-          <div className="details-section shadow">
-            <div className="details-content">
-              {/* Left Side: Tour Details */}
-              <div className="details-left">
-                <div className="tour-info">
-                  <h2>
-                    {tour.departure} <span className="arrow">&gt;&gt;</span>{" "}
-                    {tour.destination} <span className="tour-duration">{tour.duration}</span>
-                  </h2>
-                </div>
-                <div className="embarkation-disembarkation">
-                  <p className="tour-info">
-                    <span className="icon">🛳 </span>Embarkation:{" "}
-                    <span className="time">{tour.embarkation}</span>
-                  </p>
-                  <p className="tour-info">
-                    <span className="icon">⛴ </span>Disembarkation:{" "}
-                    <span className="time">{tour.disembarkation}</span>
-                  </p>
-                </div>
-                <p className="tour-info">
-                  <strong>Visiting Ports:</strong>{" "}
-                  {tour.ports?.length > 0
-                    ? tour.ports.join(" | ")
-                    : "No ports specified"}
-                </p>
-              </div>
-
-              {/* Vertical Divider */}
-              <div className="divider"></div>
-
-              {/* Right Side: Price and Booking */}
-              <div className="details-right">
-                <div className="details-right-content">
-                  <div className="pricing-box">
-                    <p className="price-label">Starting from</p>
-                    <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
-                    <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
+    <div>
+      <div className="tours-page">
+        <Header /> {/* Include the Header component */}
+        <h1 className="page-title">Our Tours</h1>
+        {error && <p className="error">Error: {error}</p>}
+        {tours.map((tour, index) => (
+          <div key={index} className="tour-section">
+            {/* Details Section */}
+            <div className="details-section shadow">
+              <div className="details-content">
+                {/* Left Side: Tour Details */}
+                <div className="details-left">
+                  <div className="tour-info">
+                    <h2>
+                      {tour.departure} <span className="arrow">&gt;&gt;</span>{" "}
+                      {tour.destination} <span className="tour-duration">{tour.duration}</span>
+                    </h2>
                   </div>
-                  <button
-                    className="book-now-btn"
+                  <div className="embarkation-disembarkation">
+                    <p className="tour-info">
+                      <span className="icon">🛳 </span>Embarkation:{" "}
+                      <span className="time">{tour.embarkation}</span>
+                    </p>
+                    <p className="tour-info">
+                      <span className="icon">⛴ </span>Disembarkation:{" "}
+                      <span className="time">{tour.disembarkation}</span>
+                    </p>
+                  </div>
+                  <p className="tour-info">
+                    <strong>Visiting Ports:</strong>{" "}
+                    {tour.ports?.length > 0
+                      ? tour.ports.join(" | ")
+                      : "No ports specified"}
+                  </p>
+                </div>
 
-                  >
-                    <Link href={route('booking_now')}></Link>
-                    BOOK NOW
-                  </button>
+                {/* Vertical Divider */}
+                <div className="divider"></div>
+
+                {/* Right Side: Price and Booking */}
+                <div className="details-right">
+                  <div className="details-right-content">
+                    <div className="pricing-box">
+                      <p className="price-label">Starting from</p>
+                      <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
+                      <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
+                    </div>
+                    <button
+                      className="book-now-btn"
+
+                    >
+                      <Link href={route('booking_now')}></Link>
+                      BOOK NOW
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Itinerary Section */}
+            <Itinerary days={tour.days} />
+
+            {/* Itinerary Reviews Section */}
+            <ItineraryReviewsPage />
+            
           </div>
-
-          {/* Itinerary Section */}
-          <Itinerary days={tour.days} />
-
-          {/* Itinerary Reviews Section */}
-          <ItineraryReviewsPage />
-        </div>
-      ))}
+        ))}
+      </div>
+      <div><Footer /></div>
     </div>
+
+
   );
 };
 
 export default Tours;
-

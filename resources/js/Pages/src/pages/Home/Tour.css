@@ -6,6 +6,12 @@
   font-family: Arial, sans-serif;
   margin: auto;
 }
+.header1{
+  max-width: fit-content;
+  height: auto;
+  position:sticky;
+  
+}
 .tour-info {
   flex:3;
 }
