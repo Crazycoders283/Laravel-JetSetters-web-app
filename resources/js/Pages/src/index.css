@@ -9,7 +9,7 @@
 
 /* Defining custom CSS variables */
 :root {
-  --primaryClr: blue;                      
+  /* --primaryClr: blue;                       */
   --secondaryClr: #fffaf9;                 
   --bgClr: #f8f9fd;                        
   --white: #ffffff;                        
