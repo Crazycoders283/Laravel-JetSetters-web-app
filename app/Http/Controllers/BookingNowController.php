@@ -11,6 +11,6 @@ class BookingNowController extends Controller
     public function index()
     {
 
-        return Inertia::render('src/components/Booking/index');
+        return Inertia::render('src/pages/Home/Tours');
     }
 }

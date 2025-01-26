@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import sliderImg from "../../assets/images/slider/1.png";
 import "./banner.css";
 
+import { Head, Link, useForm } from '@inertiajs/react';
 // Import FontAwesome for icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -89,7 +90,7 @@ const Banner = () => {
 
             {/* Book Now Button */}
             <div className="book-now-container">
-              <button className="book-now-btn">BOOK NOW</button>
+              <button className="book-now-btn"><Link href={route('booking_index')}>BOOK NOW</Link></button>
             </div>
           </Carousel.Caption>
         </Carousel.Item>

@@ -11,6 +11,6 @@ class BookingController extends Controller
     {
         // die('kkkkkkkk');
         // return Inertia::render('src/components/Booking/index');
-        return Inertia::render('src/pages/Home/Tours');
+        return Inertia::render('src/pages/Home/searchpage');
     }
 }

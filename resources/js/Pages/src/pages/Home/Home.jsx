@@ -7,6 +7,7 @@ import CruiseDeals from "./CruiseDeals";
 import Cards from "../../components/Cards/Cards";
 import "./home.css";
 
+import { Head, Link, useForm } from '@inertiajs/react';
 const destinations = [
   {
     id: 1,

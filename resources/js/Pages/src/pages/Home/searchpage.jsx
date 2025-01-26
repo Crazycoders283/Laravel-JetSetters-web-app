@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import { Head, Link, useForm } from '@inertiajs/react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -67,6 +69,7 @@ const dummyData = [
 const CruisePackageCard = ({ cruise }) => {
   return (
     <div className="cruise-card">
+      <Head title="Search" />
       <div className="cruise-card-image">
         <img src={cruise.image} alt={cruise.title} className="image" />
       </div>
@@ -87,7 +90,7 @@ const CruisePackageCard = ({ cruise }) => {
           <span>Sailing Dates: </span>
           {cruise.dates}
         </p>
-        <button className="view-itinerary-btn">View Itinerary</button>
+        <button className="view-itinerary-btn"><Link href={route('booking_now')}>View Itinerary</Link></button>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             {/* Head Metadata */}
-            <Head title="Welcome" />
+            <Head title="Home" />
 
             {/* Header Section */}
             <Header />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Calendar, DollarSign, Filter, Search as SearchIcon } from 'lucide-react';
 import '../Home/search.css';
+import Rectangle from './Rectangle 23394.png'
 const Search = () => {
   const [filters, setFilters] = useState(['Luxury', 'Family', 'Ocean View']);
   const [priceRange, setPriceRange] = useState([200, 850]);
