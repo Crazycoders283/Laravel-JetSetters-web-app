@@ -70,7 +70,7 @@
 }
 
 .destination-card .book-now:hover {
-  background-color: #0056b3;
+  background-color: #055B75;
 }
 
 .tours_section {
@@ -247,7 +247,7 @@
 }
 
 .explore-more-btn {
-  background-color: #007bff;
+  background-color: #0855A2;
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -263,7 +263,7 @@
   margin-bottom: 12px; /* Space below the button */
 }
 
-.explore-more-btn:hover {
+/* .explore-more-btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
-}
+ 
 

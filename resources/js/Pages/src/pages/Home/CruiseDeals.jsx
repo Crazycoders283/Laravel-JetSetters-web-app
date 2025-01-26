@@ -1,6 +1,6 @@
 import React from "react";
 import "./CruiseDeals.css";
-
+import Icon from"../Home/Icon.png";
 const CruiseDeals = () => {
   return (
     <div className="cruise-deals">
@@ -15,7 +15,7 @@ const CruiseDeals = () => {
           />
           <button className="email-submit-btn">
             <img
-              src="/path/to/send-icon.png"
+              src={Icon}
               alt="Send"
               className="send-icon"
             />

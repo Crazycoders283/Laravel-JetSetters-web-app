@@ -26,6 +26,31 @@ const cardsData = [
     description: "Starts from $50.00/p.p",
     buttonText: "Book Now",
   },
+  {
+    id: 3,
+    image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
+    title: "Disney Cruise",
+    rating: "4.7",
+    description: "Starts from $50.00/p.p",
+    buttonText: "Book Now",
+  },
+  {
+    id: 3,
+    image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
+    title: "Disney Cruise",
+    rating: "4.7",
+    description: "Starts from $50.00/p.p",
+    buttonText: "Book Now",
+  },
+  {
+    id: 3,
+    image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
+    title: "Disney Cruise",
+    rating: "4.7",
+    description: "Starts from $50.00/p.p",
+    buttonText: "Book Now",
+  },
+
 ];
 
 const App = () => {

@@ -3,9 +3,10 @@
 
 /* General Footer Styling */
 .footer {
-  background-color: #dbeeff; /* Light blue background */
+  background-image: url('footer.png');
+  background-size: cover; /* Ensure the image covers the whole area */
   padding: 40px 20px;
-  color: #333; /* Dark text */
+  color: #FFFFFF; /* Dark text */
   font-family: "Poppins", sans-serif;
 }
 
@@ -30,7 +31,7 @@
   font-size: 15.78px; /* Exact size for 'Connect us' */
   font-family: "Poppins", sans-serif;
   font-weight: 500; /* Poppins Medium */
-  color: #555; /* Slightly lighter text */
+  color: #FFFFFF; /* Slightly lighter text */
   margin-bottom: 10px;
 }
 
@@ -39,7 +40,7 @@
   font-size: 24px; /* Work Sans Regular */
   font-family: "Work Sans", sans-serif;
   font-weight: 400; /* Regular weight */
-  color: #000; /* Black for section titles */
+  color: #FFFFFF; /* Black for section titles */
   margin-bottom: 10px;
 }
 
@@ -62,7 +63,7 @@
 .footer-links a,
 .footer-contacts a {
   text-decoration: none;
-  color: #333;
+  color: #FFFFFF;
   font-size: 16px; /* Poppins Regular */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -70,47 +71,74 @@
 
 .footer-links a:hover,
 .footer-contacts a:hover {
-  color: #007bff;
+  /* color: #007bff; */
   text-decoration: underline;
 }
 
 /* Social Media Icons */
 .social-icons {
   display: flex;
-  gap: 20px; /* Add spacing between icons */
-  margin-top: 10px;
+  gap: 15px; /* Add appropriate spacing between icons */
+  margin-top: 15px; /* Space between icons and subtitle */
+  justify-content: flex-start; /* Align icons to the left */
 }
 
 .social-link {
-  font-size: 20px;
-  color: #007bff;
-  transition: color 0.3s;
+  font-size: 24px; /* Increase icon size for better visibility */
+  color: #ffffff; /* White icons to match the footer background */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover {
-  color: #0056b3; /* Darker blue */
+  color: #ffcc00; /* Change hover color to gold for a premium look */
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
 }
 
 /* Contact Section Icons */
 .footer-contacts i {
   margin-right: 8px;
-  color: #007bff; /* Icon color */
+  font-size: 20px; /* Slightly larger icons for readability */
+  vertical-align: middle; /* Align icons properly with text */
+  color: #ffffff; /* White icons by default */
+  transition: color 0.3s ease;
+}
+
+.footer-contacts a,
+.footer-contacts li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-contacts i:hover {
+  color: #ffcc00; /* Match hover color with social icons */
+}
+
+/* Social Media Section Subtitle */
+.footer-subtitle {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Make 'Connect us' uppercase for emphasis */
 }
 
 /* Bottom Section */
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  margin-top: 30px;
+  font-size: 14px; /* Slightly larger for readability */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  padding-top: 15px;
 }
 
 .footer-bottom a {
   text-decoration: none;
-  color: #007bff;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .footer-bottom a:hover {
-  color: #0056b3;
+  color: #ffcc00; /* Hover color matches overall theme */
 }

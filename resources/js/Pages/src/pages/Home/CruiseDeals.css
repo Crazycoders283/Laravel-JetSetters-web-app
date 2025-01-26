@@ -32,24 +32,28 @@
   position: relative;
   display: flex;
   margin-top: 20px;
+  --tw-ring-colour:#FFFFFF;
 }
 
 .email-input {
-  width: 100%;
-  padding: 12px 2px;
+  width: 97%;
+  /* padding: 12px 2px; */
   border-radius: 12px;
   border: 1px solid #ddd;
   outline: none;
   font-size: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  font-size: 13.81px;
+
 }
 .email-submit-btn {
   position: relative;
   right: 9%;
   top: 50%;
-  width: 50px; /* Set width to 40px */
-  height: 50px; /* Set height to 40px */
-  background-color: #0d6efd;
+  width: 40px; /* Set width to 40px */
+  height: 40px; /* Set height to 40px */
+  background-color: #0855a2;
   border: none;
   padding: 16px,3px !important; /* Adjust padding for a smaller size */
   border-radius: 10px;
@@ -63,11 +67,5 @@
 
 }
 
-
-.send-icon {
-  width: 20px;
-  height: 20px;
-  filter: invert(100%);
-}
 
 

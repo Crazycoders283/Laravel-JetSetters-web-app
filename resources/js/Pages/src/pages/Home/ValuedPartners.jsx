@@ -1,6 +1,9 @@
 import React from "react";
 import "./ValuedPartners.css";
 
+// Import the asset image
+import rectangle1 from '../Home/Frame 427320682.png';  // Adjust path if needed
+
 const ValuedPartners = () => {
   return (
     <div className="outer-container">
@@ -8,40 +11,11 @@ const ValuedPartners = () => {
       <div className="inner-container">
         <div className="partners">
           <img
-            src="https://via.placeholder.com/150x50?text=Diners+Club"
+            src={rectangle1}  // Use the imported image here
             alt="Diners Club"
             className="partner-logo"
           />
-          <img
-            src="https://via.placeholder.com/150x50?text=American+Express"
-            alt="American Express"
-            className="partner-logo"
-          />
-          <img
-            src="https://via.placeholder.com/150x50?text=Discover"
-            alt="Discover"
-            className="partner-logo"
-          />
-          <img
-            src="https://via.placeholder.com/150x50?text=ARC"
-            alt="ARC"
-            className="partner-logo"
-          />
-          <img
-            src="https://via.placeholder.com/150x50?text=UATP"
-            alt="UATP"
-            className="partner-logo"
-          />
-          <img
-            src="https://via.placeholder.com/150x50?text=Mastercard"
-            alt="Mastercard"
-            className="partner-logo"
-          />
-          <img
-            src="https://via.placeholder.com/150x50?text=VISA"
-            alt="VISA"
-            className="partner-logo"
-          />
+          {/* Add more images or logos here as needed */}
         </div>
       </div>
     </div>

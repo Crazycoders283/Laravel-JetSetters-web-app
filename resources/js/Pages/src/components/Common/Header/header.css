@@ -6,12 +6,14 @@
   width: 100%;
   height: 71px; /* Fixed height of 71px */
   animation: smoothScroll 0.5s ease-out forwards;
-  background: rgba(20, 20, 20, 0.877);
+  background: rgba(0, 0, 0, 0.70); /* Updated background */
+  backdrop-filter: blur(12px); /* Applied backdrop blur */
   z-index: 999;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: auto;
 }
+
 
 
 .is-sticky a,

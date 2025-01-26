@@ -1,10 +1,12 @@
 import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "../Footer/footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* Logo and Social Section */}
         <div className="footer-section logo-section">
           <img
             src="https://via.placeholder.com/100x100?text=Logo"
@@ -12,26 +14,27 @@ const Footer = () => {
             className="footer-logo"
           />
           <h4 className="footer-title">JET SETTERS</h4>
-          <p className="footer-subtitle">Connect us</p>
-          <div className="social-icons">
-            <a href="#" className="social-link">
-              <i className="bi bi-facebook"></i>
+          <p className="footer-subtitle">Connect with us</p>
+          <div className="social-icons flex gap-4">
+            <a href="#" className="social-link" aria-label="Facebook">
+              <FaFacebookF />
             </a>
-            <a href="#" className="social-link">
-              <i className="bi bi-twitter"></i>
+            <a href="#" className="social-link" aria-label="Twitter">
+              <FaTwitter />
             </a>
-            <a href="#" className="social-link">
-              <i className="bi bi-instagram"></i>
+            <a href="#" className="social-link" aria-label="Instagram">
+              <FaInstagram />
             </a>
-            <a href="#" className="social-link">
-              <i className="bi bi-linkedin"></i>
+            <a href="#" className="social-link" aria-label="LinkedIn">
+              <FaLinkedinIn />
             </a>
-            <a href="#" className="social-link">
-              <i className="bi bi-youtube"></i>
+            <a href="#" className="social-link" aria-label="YouTube">
+              <FaYoutube />
             </a>
           </div>
         </div>
 
+        {/* Services Section */}
         <div className="footer-section">
           <h4 className="footer-title">Service</h4>
           <ul className="footer-links">
@@ -50,6 +53,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Our Work Section */}
         <div className="footer-section">
           <h4 className="footer-title">Our Work</h4>
           <ul className="footer-links">
@@ -65,6 +69,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Packages Section */}
         <div className="footer-section">
           <h4 className="footer-title">Packages</h4>
           <ul className="footer-links">
@@ -86,26 +91,26 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Contact Section */}
         <div className="footer-section">
-          <h4 className="footer-title">Contacts us</h4>
+          <h4 className="footer-title">Contact us</h4>
           <ul className="footer-contacts">
             <li>
-              <i className="bi bi-envelope"></i>{" "}
-              <a href="mailto:bookings@jet-setters.us">
-                bookings@jet-setters.us
-              </a>
+              <FaEnvelope className="icon" />{" "}
+              <a href="mailto:bookings@jet-setters.us">bookings@jet-setters.us</a>
             </li>
             <li>
-              <i className="bi bi-telephone"></i> (+1) 888-581-3028
+              <FaPhoneAlt className="icon" /> (+1) 888-581-3028
             </li>
             <li>
-              <i className="bi bi-geo-alt"></i> 513 W Bonaventure Ave Tracy, CA
+              <FaMapMarkerAlt className="icon" /> 513 W Bonaventure Ave Tracy, CA
               95391
             </li>
           </ul>
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>
           Copyright © 2024 |{" "}
