@@ -25,7 +25,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             <Header />
 
             {/* Banner Section */}
-            <Banner />
 
             {/* Home Section */}
             <Home />
