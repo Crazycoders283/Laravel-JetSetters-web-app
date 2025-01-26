@@ -48,6 +48,7 @@ margin-left: 0px;
   margin-bottom: 10px;
   margin-left: 0; /* Align closer to the left */
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  
 }
 
 /* Search Bar Section - Horizontal Layout */
@@ -55,9 +56,10 @@ margin-left: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(300, 300, 300, 0.15); /* Transparent background */
-  backdrop-filter: blur(15px) !important; /* Glassmorphism effect with !important */
-  -webkit-backdrop-filter: blur(15px) !important; /* Ensures compatibility with WebKit browsers */
+  /* background-color: rgba(300, 300, 300, 0.15); Transparent background */
+  /* backdrop-filter: blur(10px) !important; Glassmorphism effect with !important */
+  -webkit-backdrop-filter: blur(5px) !important; /* Ensures compatibility with WebKit browsers */
+
   border-radius: 20px; /* Corner radius of 20px */
   padding: 10px 20px;
   width: 1252px; /* Set width to 1252px */
@@ -67,6 +69,9 @@ margin-left: 0px;
   margin: 10px auto; /* Center the element horizontally */
   transition: all 0.3s ease;
   margin-left: 0px;
+  border-radius: 20px;
+background: rgba(255, 255, 255, 0.10);
+backdrop-filter: blur(5px);
 }
 
 
@@ -79,17 +84,18 @@ margin-left: 0px;
 }
 
 .filter-item p {
-  font-size: 12px;
+  font-size: 20px;
   color: #c1c1c1;
   margin: 0;
-  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 }
 
 .filter-item h4 {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Divider - Thin Vertical Line */

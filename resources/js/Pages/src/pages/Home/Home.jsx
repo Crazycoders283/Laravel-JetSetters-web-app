@@ -5,7 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ValuedPartners from "./ValuedPartners";
 import CruiseDeals from "./CruiseDeals";
 import Cards from "../../components/Cards/Cards";
-import "./home.css";
+import "./home.css"
+import C1 from "../Home/C1.png";
 
 import { Head, Link, useForm } from '@inertiajs/react';
 const destinations = [
@@ -94,6 +95,11 @@ const Home = () => {
         </Container>
       </section>
       <div className="explore-more-container">
+      <img
+        src={C1}
+        alt="Decorative" 
+        className="left-top-image"
+      />
         <button className="explore-more-btn">Explore More</button>
       </div>
 
