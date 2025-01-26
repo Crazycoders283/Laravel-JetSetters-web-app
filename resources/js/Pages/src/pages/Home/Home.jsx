@@ -74,7 +74,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      
+
 
       {/* Destination Section */}
       <section className="popular py-5">
@@ -93,9 +93,9 @@ const Home = () => {
         </Container>
       </section>
       <div className="explore-more-container">
-              <button className="explore-more-btn">Explore More</button>
-            </div>
-          
+        <button className="explore-more-btn">Explore More</button>
+      </div>
+
 
 
       {/* Cruise Section */}
@@ -115,9 +115,9 @@ const Home = () => {
         </Container>
       </section>
       <div className="explore-more-container">
-              <button className="explore-more-btn">Explore More</button>
-            </div>
-          
+        <button className="explore-more-btn">Explore More</button>
+      </div>
+
 
       {/* Cruise Deals Section */}
       <CruiseDeals />
