@@ -53,6 +53,7 @@ margin-left: 0px;
 
 /* Search Bar Section - Horizontal Layout */
 .search-bar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,14 +138,16 @@ backdrop-filter: blur(5px);
 .book-now-container {
   margin-top: 45px;
   text-align: left; /* Aligns the button to the left */
+  
 }
 .book-now-btn {
+  position: relative;
   width: 200px; /* Set width to 170px */
   height: 54px; /* Set height to 37px */
   padding: 0; /* Remove extra padding to fit the specified size */
   font-size: 18px; /* Font size */
   font-weight: 800; /* Bold font weight */
-  color: #ffffff; /* Text color */
+  color: #FFFFFF !important ; /* Text color */
   background-color:#0855A2; /* Button background color */
   border: none;
   border-radius: 32px; /* Rounded corners */
