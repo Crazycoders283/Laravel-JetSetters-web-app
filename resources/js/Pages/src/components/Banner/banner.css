@@ -28,8 +28,8 @@
 }
 /* Caption Text */
 .slider .carousel .carousel-item .carousel-caption .slider_des p.heading {
-  color: #FFF;
-
+color: #FFF;
+text-align: left;
 font-family: "Water Brush";
 font-size: 46px;
 font-style: normal;
