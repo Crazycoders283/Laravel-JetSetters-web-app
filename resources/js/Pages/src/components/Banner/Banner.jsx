@@ -19,7 +19,7 @@ import {
 const Banner = () => {
   return (
     <section className="slider">
-      <Carousel variant="dark">
+      <Carousel variant="white">
         {/* Carousel Item */}
         <Carousel.Item>
           <img src={sliderImg} className="d-block w-100" alt="First slide" />

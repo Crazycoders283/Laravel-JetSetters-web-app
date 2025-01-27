@@ -7,6 +7,10 @@
 .slider .carousel {
   position: relative;
 }
+.carousel-item{
+  /* position:fixed; */
+
+}
 
 /* Slider Overlay */
 .slider .carousel::after {
