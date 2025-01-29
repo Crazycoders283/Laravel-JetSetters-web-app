@@ -11,6 +11,10 @@
   /* position:fixed; */
 
 }
+.bannerImag{
+  position:relative;
+  background-color: #FFFFFF;
+}
 
 /* Slider Overlay */
 .slider .carousel::after {

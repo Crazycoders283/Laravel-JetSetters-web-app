@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import sliderImg from "../../assets/images/slider/1.png";
+import bannerImag from"../Banner/2.svg";
 import "./banner.css";
 
 import { Head, Link, useForm } from '@inertiajs/react';
@@ -22,7 +23,7 @@ const Banner = () => {
       <Carousel variant="white">
         {/* Carousel Item */}
         <Carousel.Item>
-          <img src={sliderImg} className="d-block w-100" alt="First slide" />
+          <img src={bannerImag} className="d-block w-100" alt="First slide" />
           <Carousel.Caption>
             {/* Banner Content */}
             <div className="slider_des">
