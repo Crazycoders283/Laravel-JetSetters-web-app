@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+Route::get('/packages', [PackagesController::class, 'index'])->name('package_index');
 Route::get('/booking', [BookingController::class, 'index'])->name('booking_index');
 Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
 Route::get('/dashboard', function () {
