@@ -32,7 +32,6 @@ const Search = () => {
                 <label>Price</label>
                 <div className="price-range">
                   <span>${priceRange[0]}</span>
-                  <span>${priceRange[1]}</span>
                 </div>
               </div>
             </div>

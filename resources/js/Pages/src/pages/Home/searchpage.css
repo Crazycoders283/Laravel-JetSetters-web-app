@@ -239,7 +239,8 @@ body {
     max-width: 1369px;
     min-height: 354px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left:6%;
+    margin-left:12%;
+    
     
   }
   

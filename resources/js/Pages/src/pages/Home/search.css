@@ -118,8 +118,8 @@
   .filter-tag {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border: 1px solid rgba(53, 120, 165, 0.425);
+    border-radius: 30px;
     padding: 6px 16px;
     color: #fff;
     font-size: 0.9rem;
