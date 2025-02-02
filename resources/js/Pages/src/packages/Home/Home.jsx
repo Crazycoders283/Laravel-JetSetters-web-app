@@ -9,6 +9,7 @@ import "./home.css"
 import C1 from "../Home/C1.png";
 
 import { Head, Link, useForm } from '@inertiajs/react';
+import Footer from "../components/Common/Footer/Footer";
 const destinations = [
   {
     id: 1,
@@ -74,6 +75,7 @@ const cruises = [
 
 const Home = () => {
   return (
+  
     <>
       <Banner />
 
@@ -84,9 +86,9 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading text-center">
-                <h1>Explore By Destination</h1>
+                <h1>Discover Luxury and Adventure in the Desert</h1>
                 <p className="subtitle">
-                  Discover the top destinations curated just for you
+                  Dubai Packages
                 </p>
               </div>
             </Col>
@@ -133,6 +135,7 @@ const Home = () => {
       <ValuedPartners />
     </>
   );
+  
 };
 
 export default Home;

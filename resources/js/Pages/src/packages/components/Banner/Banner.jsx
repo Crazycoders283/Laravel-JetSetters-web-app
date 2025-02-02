@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import sliderImg from "../../../assets/images/slider/1.png";
-import bannerImag from "../Banner/2.svg";
+import bannerImag from "../Banner/2(3).png";
 import "./banner.css";
 
 import { Head, Link, useForm } from '@inertiajs/react';
@@ -27,17 +27,18 @@ const Banner = () => {
           <Carousel.Caption>
             {/* Banner Content */}
             <div className="slider_des">
+              
+              <h2 className="sub_text">Packages That Work for You</h2>
               <p className="heading">
-                <span>----Explore and Travel22222222222222222222222222222222222222222222222</span>
+                <span>Design with you in mind our packages bring value and convenience together</span>
               </p>
-              <h2 className="sub_text">Our Cheapest</h2>
-              <h2 className="sub_text">Cruise Search</h2>
+              {/* <p className="sub_text"></p> */}
             </div>
 
             {/* Search Bar Section */}
             <div className="search-bar">
               <div className="filter-item">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
+                {/* <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" /> */}
                 <div>
                   <p>Location</p>
                   <h4>USA</h4>
@@ -47,40 +48,46 @@ const Banner = () => {
               <div className="divider"></div>
 
               <div className="filter-item">
-                <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+                {/* <FontAwesomeIcon icon={faShip} className="icon" /> */}
                 <div>
-                  <p>Date</p>
-                  <h4>13 May, 2023</h4>
+                  <p>Packages</p>
+                  <h4>Select Package</h4>
                 </div>
               </div>
+              <div className="divider"></div>
+
+
+              <div className="filter-item">
+  <div className="date-container">
+    <div>
+      <p>Date</p>
+      <h4>13 May, 2023</h4>
+    </div>
+    <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+  </div>
+</div>
+
+
+              
+             
 
               <div className="divider"></div>
 
-              <div className="filter-item">
-                <FontAwesomeIcon icon={faShip} className="icon" />
-                <div>
-                  <p>Cruiseline</p>
-                  <h4>Curnard</h4>
-                </div>
-              </div>
-
-              <div className="divider"></div>
-
-              <div className="filter-item">
+              {/* <div className="filter-item">
                 <FontAwesomeIcon icon={faDollarSign} className="icon" />
                 <div>
                   <p>Price Range</p>
                   <h4>$200-$500</h4>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="divider"></div>
+              {/* <div className="divider"></div> */}
 
               <div className="filter-item">
-                <FontAwesomeIcon icon={faFilter} className="icon" />
+                {/* <FontAwesomeIcon icon={faFilter} className="icon" /> */}
                 <div>
-                  <p>Filters</p>
-                  <h4>More Filters</h4>
+                  <p>Persons</p>
+                  <h4>Number of Guests</h4>
                 </div>
               </div>
 
@@ -90,9 +97,9 @@ const Banner = () => {
             </div>
 
             {/* Book Now Button */}
-            <div className="book-now-container">
+            {/* <div className="book-now-container">
               <button className="book-now-btn"><Link href={route('booking_index')}>BOOK NOW</Link></button>
-            </div>
+            </div> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

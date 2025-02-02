@@ -14,6 +14,7 @@
 .bannerImag{
   position:relative;
   background-color: #FFFFFF;
+  z-index: 99;
 }
 
 /* Slider Overlay */
@@ -30,20 +31,20 @@
 /* Caption Styles */
 .slider .carousel .carousel-item .carousel-caption {
   z-index: 9;
-  bottom: 20%; /* Adjusts caption position */
+  bottom:29%; /* Adjusts caption position */
   left: 5%; /* Moves content closer to the left */
   text-align: left; /* Aligns text to the left */
 }
 /* Caption Text */
 .slider .carousel .carousel-item .carousel-caption .slider_des p.heading {
-color: #FFF;
-text-align: left;
-font-family: "Water Brush";
-font-size: 46px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: "Poppins", sans-serif; /* Changed to Poppins */
+  font-size: 20px; /* Updated font size */
+  font-weight: 400; /* Regular font weight */
+  line-height: 120%; /* Updated line height */
+  margin-left: 150px;
+  margin-top:-70px;
 }
 
 
@@ -53,12 +54,35 @@ margin-left: 0px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 500; /* Medium weight */
-  margin-bottom: 10px;
-  margin-left: 0; /* Align closer to the left */
+  margin-bottom: 85px;
+  margin-left: 175px; /* Align closer to the left */
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-  
+  margin-right: -75%;
+  gap: 10%!important;
+  margin-top: 75px!important;
+  top:25%
+}
+.carousel-indicators [data-bs-target] {
+  background-color: none;
 }
 
+
+.carousel-control-next {
+
+}
+.carousel-control-next{
+
+}
+.carousel-control-next-icon{
+
+}
+.carousel-control-prev-icon {
+  background-image: none!important;
+
+}
+.carousel-control-next-icon {
+  background-image: none;
+  }
 /* Search Bar Section - Horizontal Layout */
 .search-bar {
   position: relative;
@@ -72,15 +96,16 @@ margin-left: 0px;
   border-radius: 20px; /* Corner radius of 20px */
   padding: 10px 20px;
   width: 1252px; /* Set width to 1252px */
-  height: 72px; /* Set height to 72px */
+  height: 105.13px; /* Set height to 72px */
   max-width: 100%; /* Ensure it's responsive and doesn't exceed the viewport */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 10px auto; /* Center the element horizontally */
   transition: all 0.3s ease;
-  margin-left: 0px;
-  border-radius: 20px;
-background: rgba(255, 255, 255, 0.10);
-backdrop-filter: blur(5px);
+  margin-left: 175px;
+  border-radius: 14px;
+background: rgba(255, 255, 255, 1);
+/* backdrop-filter: blur(5px); */
+margin-top:75px;
 }
 
 
@@ -89,36 +114,56 @@ backdrop-filter: blur(5px);
 .filter-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .filter-item p {
-  font-size: 20px;
-  color: #c1c1c1;
-  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  margin: 15px;
+  font-weight: 600;
   font-family: "Poppins", sans-serif;
+  align-items: center;
+  margin-left: 15px;
 }
 
 .filter-item h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-  color: #ffffff;
+  font-size: 14px;
+  /* font-weight: 600; */
+  margin: 5px;
+  color: rgba(0,0,0,0.70);
   font-family: "Poppins", sans-serif;
+  font-weight: 4;
+  margin-left: 15px;
+  align-items: center!important;
+
+
 }
 
 /* Divider - Thin Vertical Line */
 .divider {
   width: 1px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
+  height: 75px;
+  background-color: rgba(0,0,0, 0.43);
+  margin-left: 25px;
 }
 
-/* Icon Styles */
-.icon {
-  font-size: 18px;
-  color: #ffffff;
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push icon to the right */
+  width: 100%; /* Ensure it spans the full width */
+  margin-bottom: 0px;
 }
+
+.icon {
+  margin-top:50px;
+  margin-left: 25px; /* Adjust spacing if needed */
+  color:#000000
+  
+}
+
 
 /* Search Button */
 .search-btn {
@@ -142,7 +187,7 @@ backdrop-filter: blur(5px);
   transform: scale(1.1);
 }
 
-/* Book Now Button */
+Book Now Button
 .book-now-container {
   margin-top: 45px;
   text-align: left; /* Aligns the button to the left */

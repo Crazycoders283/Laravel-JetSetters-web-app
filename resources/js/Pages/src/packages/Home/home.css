@@ -283,5 +283,31 @@
 
 /* .explore-more-btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
+
+
+  .popular {
+    padding: 5rem 0;
+    background-color:rgba(2,155,197,0.1); /* Light gray background */
+  }
+  
+  .main_heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main_heading h1 {
+    font-size: 18px;
+    font-weight: 575;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(5,91,117,1);
+    margin-top: 15px;
+  }
+  
+  .subtitle {
+    font-size: 36px;
+    color: #055B75;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+
+  }
  
 
