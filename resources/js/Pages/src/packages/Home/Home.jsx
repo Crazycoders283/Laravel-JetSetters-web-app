@@ -1,15 +1,19 @@
 import React from "react";
-import Banner from '../components/Banner/Banner'
+import Banner from '../components/Banner/Banner';
 import Features from "../components/Features/Features";
 import { Container, Row, Col } from "react-bootstrap";
 import ValuedPartners from "./ValuedPartners";
-import CruiseDeals from "./CruiseDeals";
 import Cards from "../components/Cards/Cards";
-import "./home.css"
+import "./home.css";
+import europe from "../components/Cards/europe";
 import C1 from "../Home/C1.png";
-
 import { Head, Link, useForm } from '@inertiajs/react';
 import Footer from "../components/Common/Footer/Footer";
+import Europe from "../components/Cards/europe";
+import kashmir from "../components/Cards/kashmir"; // Kashmir component imported
+import Kashmir from "../components/Cards/kashmir";
+import Bhutan from"../components/Cards/bhutan";
+
 const destinations = [
   {
     id: 1,
@@ -32,7 +36,6 @@ const destinations = [
     image: "https://media.timeout.com/images/105496849/image.jpg",
     rating: "5.0",
   },
-  // Add other destination data...
 ];
 
 const cruises = [
@@ -40,46 +43,44 @@ const cruises = [
     id: 1,
     name: "Celebrity Cruiseline",
     price: "$96/p",
-    image: "https://example.com/image1.jpg", // Replace with the actual URL
+    image: "https://example.com/image1.jpg",
     rating: "5.0",
   },
   {
     id: 2,
     name: "Carnival",
     price: "$127/p",
-    image: "https://example.com/image2.jpg", // Replace with the actual URL
+    image: "https://example.com/image2.jpg",
     rating: "5.0",
   },
   {
     id: 3,
     name: "Disney Cruiseline",
     price: "$77/p",
-    image: "https://example.com/image3.jpg", // Replace with the actual URL
+    image: "https://example.com/image3.jpg",
     rating: "5.0",
   },
   {
     id: 4,
     name: "Cunard",
     price: "$96/p",
-    image: "https://example.com/image4.jpg", // Replace with the actual URL
+    image: "https://example.com/image4.jpg",
     rating: "5.0",
   },
   {
     id: 5,
     name: "Norwegian Cruiseline",
     price: "$3127/p",
-    image: "https://example.com/image5.jpg", // Replace with the actual URL
+    image: "https://example.com/image5.jpg",
     rating: "5.0",
   },
 ];
 
 const Home = () => {
   return (
-  
     <>
       <Banner />
-
-
+      
       {/* Destination Section */}
       <section className="popular py-5">
         <Container>
@@ -87,55 +88,55 @@ const Home = () => {
             <Col md="12">
               <div className="main_heading text-center">
                 <h1>Discover Luxury and Adventure in the Desert</h1>
-                <p className="subtitle">
-                  Dubai Packages
-                </p>
+                <p className="subtitle">Dubai Packages</p>
               </div>
             </Col>
           </Row>
           <Cards data={destinations} />
         </Container>
       </section>
+
       <div className="explore-more-container">
-        <img
-          src={C1}
-          alt="Decorative"
-          className="left-top-image"
-        />
         <button className="explore-more-btn">Explore More</button>
       </div>
 
-
-
-      {/* Cruise Section */}
-      <section className="popular py-5">
+      {/* Europe Section (py-6) */}
+      <section className="popular py-6">
         <Container>
-          <Row>
-            <Col md="12">
-              <div className="main_heading text-center">
-                <h1>Explore By Cruise Line</h1>
-                <p className="subtitle">
-                  Find the perfect cruise experience tailored for you
-                </p>
-              </div>
-            </Col>
-          </Row>
-          <Cards data={cruises} />
+          <Europe /> {/* Europe Component is Used Here */}
         </Container>
       </section>
-      <div className="explore-more-container">
-        <button className="explore-more-btn">Explore More</button>
+      <div className="explore-more-container2">
+        {/* <button className="explore-more-btn">Explore More</button> */}
       </div>
 
+      {/* Kashmir Section in py-8 container */}
+      <section className="popular py-8">
+        <Container>
+        < Kashmir/> {/* kashmir Component is Used Here */}
+        </Container>
+      </section>
+      <div className="explore-more-container3">
+        <button className="explore-more-btn3">Explore More</button>
+      </div>
+          
+              
 
-      {/* Cruise Deals Section */}
-      <CruiseDeals />
+      {/* Bhutan Section in py-8 container */}
+<section className="popular py-8">
+  <Container>
+    <Bhutan /> {/* Bhutan Component is Used Here */}
+  </Container>
+</section>
+<div className="explore-more-container4">
+  <button className="explore-more-btn4">Explore More</button>
+</div>
+
 
       {/* Showcase Valued Partners Section */}
       <ValuedPartners />
     </>
   );
-  
 };
 
 export default Home;

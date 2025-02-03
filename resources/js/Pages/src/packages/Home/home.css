@@ -11,6 +11,99 @@
   padding-bottom: 3rem !important;
   background-color: #029bc52a;
 }
+
+
+
+
+.py-6 {
+  background-color: #055B75 !important;
+}
+
+.explore-more-container2{
+  background-color: #055B75 !important;
+}
+
+.py-8{
+
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  background-color: #029bc52a;
+  
+
+  
+
+}
+
+
+.explore-more-container3{
+  background-color: #029bc52a !important;}
+
+
+
+  .explore-more-btn3{
+    background-color: #0855A2;
+    color: #ffffff;
+    border: none;
+    padding: 15px 24px;
+    font-size: 13.8px;
+    font-weight: 600; /* Semi-bold weight */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    width: 148px; /* Set the width */
+    height: 49px; /* Set the height */
+    text-transform: capitalize; /* Capitalize text */
+    transition: background-color 0.3s ease;
+    margin-top: 17px;
+    margin-left: 900px;
+    position: relative  ;
+  }
+
+.py-9{
+
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  background-color: #029bc52a;
+  
+
+  
+
+}
+
+
+.explore-more-container4{
+  background-color: #029bc52a !important;}
+
+
+
+  .explore-more-btn4{
+    background-color: #0855A2;
+    color: #ffffff;
+    border: none;
+    padding: 15px 24px;
+    font-size: 13.8px;
+    font-weight: 600; /* Semi-bold weight */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    width: 148px; /* Set the width */
+    height: 49px; /* Set the height */
+    text-transform: capitalize; /* Capitalize text */
+    transition: background-color 0.3s ease;
+    margin-top: 17px;
+    margin-left: 900px;
+    position: relative;
+
+
+
+
+
+
+
+}
+.py-10{
+
+}
 .destination-card .image-container {
   height: 200px;
   overflow: hidden;

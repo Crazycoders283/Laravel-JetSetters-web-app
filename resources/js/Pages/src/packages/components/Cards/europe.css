@@ -1,0 +1,85 @@
+.europe-main-container {
+    
+    /* padding: 20px; */
+  font-family: 'Poppins', sans-serif;
+  width:1400px;
+  height: 516px;
+  margin-left: -25px;
+  }
+  
+  .europe-heading {
+    text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  }
+  
+  .europe-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .europe-card {
+    width: 216.46px; /* Card width */
+  height: 270.94px; /* Card height */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  }
+  .europe-subhead{
+    margin-left: 560px;
+    margin-bottom:75px;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  
+  /* .europe-card:hover {
+    transform: scale(1.05);
+  } */
+  
+  
+  
+  .europe-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .europe-kumar-text {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFFFF;
+    margin-top: 10px;
+  }
+  .europe-footer{
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-right:35px;
+  }
+  
+  /* .europe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.3); */
+  
+  
+  /* .europe-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .europe-card-subtitle {
+    font-size: 16px;
+    color: #777;
+  } */
+  
