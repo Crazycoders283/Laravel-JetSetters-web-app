@@ -27,7 +27,7 @@ const Banner = () => {
           <Carousel.Caption>
             {/* Banner Content */}
             <div className="slider_des">
-              
+
               <h2 className="sub_text">Packages That Work for You</h2>
               <p className="heading">
                 <span>Design with you in mind our packages bring value and convenience together</span>
@@ -58,18 +58,18 @@ const Banner = () => {
 
 
               <div className="filter-item">
-  <div className="date-container">
-    <div>
-      <p>Date</p>
-      <h4>13 May, 2023</h4>
-    </div>
-    <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
-  </div>
-</div>
+                <div className="date-container">
+                  <div>
+                    <p>Date</p>
+                    <h4>13 May, 2023</h4>
+                  </div>
+                  <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+                </div>
+              </div>
 
 
-              
-             
+
+
 
               <div className="divider"></div>
 
@@ -91,8 +91,8 @@ const Banner = () => {
                 </div>
               </div>
 
-              <button className="search-btn">
-                <FontAwesomeIcon icon={faSearch} />
+              <button className="search-btn"><Link href={route('package_itinerary')}>
+                <FontAwesomeIcon icon={faSearch} /></Link>
               </button>
             </div>
 

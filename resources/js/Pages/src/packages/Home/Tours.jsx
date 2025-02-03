@@ -351,7 +351,7 @@ const Tours = () => {
     <div>
       <div className="tours-page">
         <Header /> {/* Include the Header component */}
-        <h1 className="page-title">Our Tours</h1>
+        <h1 className="page-title">Our Tours------------------------------------</h1>
         {error && <p className="error">Error: {error}</p>}
         {tours.map((tour, index) => (
           <div key={index} className="tour-section">

@@ -63,7 +63,7 @@ const Header = () => {
             {/* Navigation links inside Offcanvas */}
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3"> {/* Align links to the center */}
-                <NavLink className="nav-link" to="/">Cruise</NavLink>
+                <Link className="nav-link" href={route('home')}>Cruise</Link>
                 <NavLink className="nav-link" to="/">Flights</NavLink>
                 <Link className="nav-link" href={route('package_index')}>Packages</Link>
                 <NavLink className="nav-link" to="/">Rentals</NavLink>
