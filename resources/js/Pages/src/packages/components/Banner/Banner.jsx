@@ -91,7 +91,7 @@ const Banner = () => {
                 </div>
               </div>
 
-              <button className="search-btn"><Link href={route('package_itinerary')}>
+              <button className="bg-white px-4 py-2 rounded shadow hover:bg-gray-100 transition"><Link href={route('package_itinerary')} >
                 <FontAwesomeIcon icon={faSearch} /></Link>
               </button>
             </div>
