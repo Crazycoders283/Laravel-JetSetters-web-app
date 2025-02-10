@@ -11,6 +11,6 @@ class PackageBookingController extends Controller
     {
 
 
-        return Inertia::render('src/packages/Home/Tours');
+        return Inertia::render('src/packages/Home/packagecard');
     }
 }
