@@ -6,7 +6,7 @@ const ItineraryReviewsPage = () => {
     <div className="itinerary-page">
       {/* Cruise Highlight Section */}
       <section className="highlight-section">
-        <h2 className="section-title">Your Cruise Highlight</h2>
+        <h2 className="section-title">Trending Destinations</h2>
         <div className="image-grid">
           <img
             src="https://www.jaden-fox.com/wp-content/uploads/2017/02/Dinner-River-Cruise2-1.jpg"

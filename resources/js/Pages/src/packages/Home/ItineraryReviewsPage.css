@@ -19,23 +19,25 @@
   .highlight-section {
     margin-bottom: 40px;
     text-align: center;
+    height: 50%;
   }
   
   .image-grid {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 37px;
     margin-bottom: 35px;
     margin-top: 55px;
     flex-wrap: wrap;
   }
   
   .highlight-image {
-    width: 100%;
+    width: 18%;
     max-width: 300px;
-    border-radius: 8px;
+    border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    height: 290px;
   }
   
   /* Customer Reviews Section */

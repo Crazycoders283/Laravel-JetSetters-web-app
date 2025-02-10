@@ -1,19 +1,19 @@
 /* Slider Section */
 .slider {
   position: relative;
-  z-index: 99; /* Ensures slider appears above other elements */
+  z-index: 50; /* Ensures slider appears above other elements */
 }
 
 .slider .carousel {
   position: relative;
+
 }
 .carousel-item{
   /* position:fixed; */
 
 }
 .bannerImag{
-  position:relative;
-  background-color: #FFFFFF;
+ 
 }
 
 /* Slider Overlay */
@@ -45,6 +45,7 @@ font-weight: 400;
 line-height: normal;
 margin-left: 0px;
 }
+
 
 
 /* Font Style for Our Cheapest Cruise Ship */
@@ -97,6 +98,14 @@ backdrop-filter: blur(5px);
   color: #c1c1c1;
   margin: 0;
   font-family: "Poppins", sans-serif;
+}
+.sahit{
+  position:fixed;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  /* filter:grayscale(100%); */
+  filter: brightness(-50%);
+
 }
 
 .filter-item h4 {

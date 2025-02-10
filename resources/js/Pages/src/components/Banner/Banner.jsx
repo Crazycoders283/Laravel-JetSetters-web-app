@@ -23,7 +23,7 @@ const Banner = () => {
       <Carousel variant="white">
         {/* Carousel Item */}
         <Carousel.Item>
-          <img src={bannerImag} className="d-block w-100" alt="First slide" />
+          <img src={bannerImag} className="sahith" alt="First slide" />
           <Carousel.Caption>
             {/* Banner Content */}
             <div className="slider_des">

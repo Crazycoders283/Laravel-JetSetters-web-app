@@ -106,7 +106,7 @@ const Home = () => {
 
 
       {/* Cruise Section */}
-      <section className="popular py-5">
+      <section className="popular py-10">
         <Container>
           <Row>
             <Col md="12">
@@ -121,9 +121,10 @@ const Home = () => {
           <Cards data={cruises} />
         </Container>
       </section>
-      <div className="explore-more-container">
-        <button className="explore-more-btn">Explore More</button>
+      <div className="explore-more-container10">
+        <button className="explore-more-btn10">Explore More</button>
       </div>
+      
 
 
       {/* Cruise Deals Section */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Itinerary.css";
+import InclusionsExclusions from "./inclusions";
 
 const Itinerary = () => {
   const [itineraryData, setItineraryData] = useState([]);
@@ -8,26 +9,34 @@ const Itinerary = () => {
 
   // Dummy data (fallback)
   const dummyData = [
-    {
-      day: 1,
-      title: "Miami Port",
-      subtitle: "WELCOME ONBOARD",
-      description:
-        "Just as you step aboard the Empress—the top cruise in India—also known as 'A City on the Sea,' you'll be greeted with a warm welcome. Once settled, dive right in and explore the many offerings lined up for you aboard our cruise ship.",
+    { day: 1, 
+      title: "Miami Port", 
+      subtitle: `Half-day guided Dubai city tour
+      Visit the Dubai Museum at Al Fahidi Fort.
+      Stop by Jumeirah Mosque and Burj Al Arab for photo ops.`,
+      description: `Explore the Palm Jumeirah and Atlantis Hotel. 
+      Afternoon: Visit the Dubai Mall and shop or explore the Dubai Aquarium. 
+      Evening: Ascend the Burj Khalifa to witness breathtaking views.`,
     },
-    {
-      day: 2,
+    { day: 2, 
       title: "At Sea",
-      subtitle: "DAY AT SEA",
-      description:
-        "Just as you step aboard the Empress—the top cruise in India—also known as 'A City on the Sea,' you'll be greeted with a warm welcome. Once settled, dive right in and explore the many offerings lined up for you aboard our cruise ship.",
-    },
+      subtitle: `Half-day guided Dubai city tour
+      Visit the Dubai Museum at Al Fahidi Fort.
+      Stop by Jumeirah Mosque and Burj Al Arab for photo ops.`,
+      description: `Explore the Palm Jumeirah and Atlantis Hotel. 
+      Afternoon: Visit the Dubai Mall and shop or explore the Dubai Aquarium. 
+      Evening: Ascend the Burj Khalifa to witness breathtaking views.`,
+
+     },
     {
-      day: 3,
+      day: 4,
       title: "Florida Port",
-      subtitle: "ARRIVED IN FLORIDA",
-      description:
-        "Just as you step aboard the Empress—the top cruise in India—also known as 'A City on the Sea,' you'll be greeted with a warm welcome. Once settled, dive right in and explore the many offerings lined up for you aboard our cruise ship.",
+      subtitle: `Half-day guided Dubai city tour
+Visit the Dubai Museum at Al Fahidi Fort.
+Stop by Jumeirah Mosque and Burj Al Arab for photo ops.`,
+      description: `Explore the Palm Jumeirah and Atlantis Hotel. 
+      Afternoon: Visit the Dubai Mall and shop or explore the Dubai Aquarium. 
+      Evening: Ascend the Burj Khalifa to witness breathtaking views.`,
     },
   ];
 
@@ -35,13 +44,14 @@ const Itinerary = () => {
   useEffect(() => {
     const fetchItinerary = async () => {
       try {
-        const response = await fetch("https://api.example.com/itinerary"); // Replace with your API URL
+        const response = await fetch(process.env.REACT_APP_ITINERARY_API || "https://api.example.com/itinerary");
         if (!response.ok) {
           throw new Error("Failed to fetch itinerary data");
         }
         const data = await response.json();
         setItineraryData(data);
       } catch (err) {
+        console.error("Error fetching itinerary data:", err);
         setError(err.message);
         setItineraryData(dummyData); // Fallback to dummy data on error
       } finally {
@@ -53,11 +63,7 @@ const Itinerary = () => {
   }, []);
 
   if (loading) {
-    return <div className="itinerary-wrapper">Loading...</div>;
-  }
-
-  if (error) {
-    console.error("Error fetching itinerary data:", error);
+    return <div className="itinerary-wrapper">Loading itinerary...</div>;
   }
 
   return (
@@ -69,18 +75,27 @@ const Itinerary = () => {
         <hr className="header-separator" />
       </div>
 
-
-
+      {/* Error Message */}
+      {error && (
+        <div className="error-message">
+          <p>⚠️ {error}</p>
+          <p>Showing default itinerary data.</p>
+        </div>
+      )}
 
       {/* Content */}
       <div className="itinerary-content">
         {itineraryData.map((item) => (
           <div key={item.day} className="itinerary-day">
-            <div className="day-icon">Day {item.day}</div>
+            <div className="day-container">
+              <div className="day-icon">Day {item.day}</div>
+              <div className="day-title-container">
+                <p className="day-title">{item.title}</p>
+              </div>
+            </div>
             <div className="day-content">
-              <h3 className="day-title">{item.title}</h3>
-              <p className="day-subtitle">{item.subtitle}</p>
-              <p className="day-description">{item.description}</p>
+              {item.subtitle && <h3 className="day-subtitle">{item.subtitle}</h3>}
+              {item.description && <p className="day-description">{item.description}</p>}
             </div>
             <hr className="day-separator" />
           </div>
@@ -93,6 +108,9 @@ const Itinerary = () => {
           View Full Itinerary &raquo;
         </a>
       </div>
+
+      {/* Inclusions & Exclusions */}
+      {/* <InclusionsExclusions /> */}
     </div>
   );
 };
