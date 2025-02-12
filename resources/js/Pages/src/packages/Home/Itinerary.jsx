@@ -11,9 +11,13 @@ const Itinerary = () => {
   const dummyData = [
     { day: 1, 
       title: "Miami Port", 
-      subtitle: `Half-day guided Dubai city tour
-      Visit the Dubai Museum at Al Fahidi Fort.
-      Stop by Jumeirah Mosque and Burj Al Arab for photo ops.`,
+      subtitle: `.Evening:Enjoying the Flavour of Dubai  .
+    
+      `
+,
+subtitle2:'Overnight:',
+      
+
       description: `Explore the Palm Jumeirah and Atlantis Hotel. 
       Afternoon: Visit the Dubai Mall and shop or explore the Dubai Aquarium. 
       Evening: Ascend the Burj Khalifa to witness breathtaking views.`,

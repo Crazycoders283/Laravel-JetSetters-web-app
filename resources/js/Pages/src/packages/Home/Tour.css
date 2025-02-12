@@ -244,17 +244,21 @@
   }
 
   .day-title {
-    font-size: 23px;
-    font-weight: 800;
-    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    color:#000000;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.55); */
+    margin-top:10px;
+    margin-left:-120px;
   }
 
   .day-subtitle {
-    font-size: 1.2rem;
-    color: #007bff;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.55);
     font-weight: 100;
+    font-family: "Poppins",sans-serif;
+    margin-right:20px;
   }
 
   .day-description {

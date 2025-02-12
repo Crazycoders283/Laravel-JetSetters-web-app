@@ -27,6 +27,12 @@
       margin-bottom: 20px;
       text-align: left;
     }
+    /* .day-title{
+      font-family: "Poppins", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #000000;
+    } */
     
     .itinerary-wrapper .itinerary-header .itinerary-title {
       font-size: 35px;
@@ -85,9 +91,9 @@
   
     
     .day-title {
-      font-size: 1rem; /* Increased size */
-      font-weight: bold;
-      color: #333;
+      font-size: 15px; /* Increased size */
+      font-weight: 400;
+      color: #000000;
       text-align: center;
       margin-top: 3px;
       font-family: "Poppins",sans-serif;
@@ -95,9 +101,9 @@
     }
     
     .day-subtitle {
-      font-size: 24px!important;        /* Adjust the font size as needed */
-      font-weight: 600!important;       /* Semi-bold for better emphasis */
-      color: #333333;         /* Dark gray color for readability */
+      font-size: 20px!important;        /* Adjust the font size as needed */
+      font-weight: bold!important;       /* Semi-bold for better emphasis */
+      color: rgba(0,0,0,0.55);         /* Dark gray color for readability */
       margin: 70px 0;         /* Space above and below */
             /* Inner spacing */
     
@@ -107,7 +113,7 @@
     .day-description {
       font-size: 1rem; 
       line-height: 2; 
-      color: #555;
+      color: #000000;
     } 
 
     .day-title-container {
@@ -153,4 +159,12 @@
     .view-full-itinerary:hover {
       text-decoration: underline;
     }
+
+
+    .day-title-text {
+      font-size: 18px; /* You can modify this size */
+      font-weight: 700; /* Adjust the boldness */
+      color: #003366; /* Change color as needed */
+      font-family: "Poppins", sans-serif;
+      text-align: center;}
     
