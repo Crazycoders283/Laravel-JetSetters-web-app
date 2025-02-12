@@ -16,6 +16,9 @@
   flex:3;
 }
 
+.header{
+  background-color: blur(-12px,black);
+}
 .tour-info h2 {
   font-size: 40px;
   color: #000;
@@ -68,6 +71,8 @@ margin-left: 5px;
   text-align: center;
   margin-bottom: 20px;
   color: #333;
+  width:1920px;
+  height:632px;
 }
 
 .error {

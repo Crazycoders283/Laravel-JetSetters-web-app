@@ -265,6 +265,7 @@ import "./Tour.css"; // CSS file for styling
 import { Head, Link, useForm } from '@inertiajs/react';
 import Header from "../../components/Common/Header/Header"; // Importing Header component
 import Footer from "../../components/Common/Footer/Footer";
+import Image from"../Home/d4.png";
 
 const Tours = () => {
   const [tours, setTours] = useState([]);
@@ -346,12 +347,17 @@ const Tours = () => {
   };
 
   if (loading) return <div className="loading">Loading...</div>;
-
   return (
     <div>
-      <div className="tours-page">
-        <Header /> {/* Include the Header component */}
-        <h1 className="page-title">Our Tours</h1>
+       <Header />
+       <img 
+                src={Image}
+                alt="Tours Banner"
+                className="page-title"
+            />
+        <div className="tours-page">
+           
+          
         {error && <p className="error">Error: {error}</p>}
         {tours.map((tour, index) => (
           <div key={index} className="tour-section">
@@ -411,11 +417,14 @@ const Tours = () => {
             <Itinerary days={tour.days} />
 
             {/* Itinerary Reviews Section */}
-            <ItineraryReviewsPage />
+            {/* <ItineraryReviewsPage /> */}
             
           </div>
         ))}
       </div>
+      <ItineraryReviewsPage />
+            
+      
       <div><Footer /></div>
     </div>
 

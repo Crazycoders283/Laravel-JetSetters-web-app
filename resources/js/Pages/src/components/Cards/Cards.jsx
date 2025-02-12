@@ -29,7 +29,7 @@ const cardsData = [
   {
     id: 3,
     image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
-    title: "Disney Cruise",
+    title: "Curnad",
     rating: "4.7",
     description: "Starts from $50.00/p.p",
     buttonText: "Book Now",
@@ -37,7 +37,7 @@ const cardsData = [
   {
     id: 3,
     image: "https://vancouver.ca/images/cov/feature/about-vancouver-facebook-size.jpg",
-    title: "Disney Cruise",
+    title: "Norwegian Caribbean",
     rating: "4.7",
     description: "Starts from $50.00/p.p",
     buttonText: "Book Now",

@@ -2,11 +2,12 @@ import React from "react";
 import "../Cards/bhutan.css";
 import maskImage from "../Cards/image 4.png";
 
+
 const bhutanData = [
-  { id: 1, image: maskImage, title: "Tiger’s Nest", subtitle: "Paro" },
-  { id: 2, image: maskImage, title: "Punakha Dzong", subtitle: "Punakha" },
-  { id: 3, image: maskImage, title: "Buddha Dordenma", subtitle: "Thimphu" },
-  { id: 4, image: maskImage, title: "Dochula Pass", subtitle: "Thimphu" },
+  { id: 1, image: maskImage, title: "Tiger’s Nest",  },
+  { id: 2, image: maskImage, title: "Punakha Dzong", },
+  { id: 3, image: maskImage, title: "Buddha Dordenma", },
+  { id: 4, image: maskImage, title: "Dochula Pass",  },
 ];
 
 const Bhutan = () => {

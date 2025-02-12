@@ -61,6 +61,7 @@ header .navbar .navbar-brand a {
   text-transform: uppercase; /* Uppercase text */
   text-decoration: none; /* No underline */
   text-align: left; /* Aligns text inside the block */
+  margin-bottom:12px;
 }
 
 

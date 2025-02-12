@@ -13,6 +13,7 @@ import Europe from "../components/Cards/europe";
 import kashmir from "../components/Cards/kashmir"; // Kashmir component imported
 import Kashmir from "../components/Cards/kashmir";
 import Bhutan from"../components/Cards/bhutan";
+import footer from "../components/Common/Footer/Footer";
 
 const destinations = [
   {
@@ -135,6 +136,7 @@ const Home = () => {
 
       {/* Showcase Valued Partners Section */}
       <ValuedPartners />
+      <Footer/>
     </>
   );
 };
