@@ -5,7 +5,7 @@ import Header from "../components/Common/Header/Header";
 import Footer from "../components/Common/Footer/Footer";
 import Image from "../Home/Rectangle 23394.png";
 import Comments from "../Home/ItineraryReviewsPage"; // Corrected import
-
+import { Head, Link, useForm } from '@inertiajs/react';
 // Star Icon Component
 const Star = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="star-icon">
@@ -94,7 +94,7 @@ const PackageCard = ({ pkg }) => (
     <div className="price-section">
       <p className="package-price">{pkg.price}</p>
     </div>
-    <button className="book-button">Book Now</button>
+    <button className="book-button"><Link href={route('package_itinerary_booking')}>Book Now</Link></button>
   </div>
 );
 

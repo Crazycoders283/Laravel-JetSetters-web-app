@@ -7,6 +7,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingNowController;
 use App\Http\Controllers\PackageBookingController;
+use App\Http\Controllers\PackageItineraryBooknowController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -21,6 +22,7 @@ Route::get('/packages', [PackagesController::class, 'index'])->name('package_ind
 Route::get('/booking', [BookingController::class, 'index'])->name('booking_index');
 Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
 Route::get('/packages/itinerary', [PackageBookingController::class, 'index'])->name('package_itinerary');
+Route::get('/packages/itinerary/booking', [PackageItineraryBooknowController::class, 'index'])->name('package_itinerary_booking');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
