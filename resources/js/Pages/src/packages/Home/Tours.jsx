@@ -81,10 +81,10 @@ const Tours = () => {
       <Header />
 
       <div className="tour-image-container">
-        <img 
-          src="https://images.pickyourtrail.com/piotr_chrobot_6o_Usye_Y_Xg_Tg_unsplash_f34241cefb.jpg?w=1152&h=440&fit=crop&dpr=1&q=40" 
-          alt="Tour Image" 
-          className="tour-image" 
+        <img
+          src="https://images.pickyourtrail.com/piotr_chrobot_6o_Usye_Y_Xg_Tg_unsplash_f34241cefb.jpg?w=1152&h=440&fit=crop&dpr=1&q=40"
+          alt="Tour Image"
+          className="tour-image"
         />
       </div>
 
@@ -96,7 +96,7 @@ const Tours = () => {
                 <div className="details-left">
                   <div className="tour-info">
                     <h2>
-                      {tour.departure} {tour.destination} 
+                      {tour.departure} {tour.destination}
                       <span className="tour-duration">{tour.duration}</span>
                     </h2>
                   </div>
@@ -132,7 +132,7 @@ const Tours = () => {
                       <p className="tax-info">Excl. Tax Per Person</p>
                     </div>
                     <button className="book-now-btn26">
-                      <Link href={route('booking_now')}>BOOK NOW</Link>
+                      <Link className="text-white">BOOK NOW</Link>
                     </button>
                   </div>
                 </div>
@@ -142,11 +142,11 @@ const Tours = () => {
             <Itinerary days={tour.days} />
             <InclusionsExclusions />
 
-            
 
 
 
-              <ItineraryReviewsPage />
+
+            <ItineraryReviewsPage />
           </div>
         ))}
       </div>
