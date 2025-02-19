@@ -5,9 +5,14 @@ import { Link } from '@inertiajs/react';
 import { usePage } from "@inertiajs/react";
 
 const UserTable = () => {
-    const { users } = usePage().props;
+    const { users, message } = usePage().props;
 
-
+    useEffect(() => {
+        console.error(message)
+        if (message?.success) {
+            alert(flash.success); // Show success message in an alert
+        }
+    }, [flash]);
     return (
         <AuthenticatedLayout>
             <div className="p-6 bg-white shadow rounded-lg">
