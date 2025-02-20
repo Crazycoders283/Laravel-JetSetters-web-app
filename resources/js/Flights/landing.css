@@ -1,0 +1,201 @@
+/* Flight Slider Section */
+.flight-slider {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+  }
+  
+  /* Carousel */
+  .flight-slider .carousel {
+    position: relative;
+  }
+  
+  .flight-slider .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: none; /* Ensures no dark overlay */
+  }
+  
+  /* Removing Dark Overlay */
+  .flight-slider .carousel::after {
+    content: none; /* Removes any dark shading */
+  }
+  
+  /* Caption Styles */
+  .flight-slider .carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    text-align: left;
+    background-color: transparent; /* No background overlay */
+    color: #000; /* Ensures text remains visible */
+    text-shadow: none;
+  }
+  
+  /* Heading & Subtext */
+  .slider-description .heading {
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .slider-description .sub-text {
+    font-size: 72px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 14px;
+    padding: 15px 25px;
+    width: 85%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Search Item */
+  .search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .search-item p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+  }
+  
+  .search-item h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+  }
+  
+  /* Divider */
+  .divider {
+    width: 1px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Icons */
+  .icon {
+    color: #000;
+  }
+  
+  /* Search Button */
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  /* ✅ FULLY RESPONSIVE DESIGN */
+  
+  /* Large Desktops (Above 1440px) */
+  @media (min-width: 1440px) {
+    .slider-description .sub-text {
+      font-size: 80px;
+    }
+    .search-bar {
+      width: 80%;
+    }
+  }
+  
+  /* Standard Laptops & Desktops (1280px - 1440px) */
+  @media (max-width: 1440px) {
+    .slider-description .sub-text {
+      font-size: 70px;
+    }
+    .search-bar {
+      width: 85%;
+    }
+  }
+  
+  /* MacBook Pro & Medium-Sized Laptops (1024px - 1280px) */
+  @media (max-width: 1280px) {
+    .slider-description .sub-text {
+      font-size: 60px;
+    }
+    .search-bar {
+      width: 90%;
+    }
+  }
+  
+  /* Tablets & Small Laptops (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .slider-description .sub-text {
+      font-size: 50px;
+    }
+    .search-bar {
+      flex-direction: column;
+      width: 90%;
+      padding: 10px;
+    }
+  }
+  
+  /* Mobile Devices (480px - 767px) */
+  @media (max-width: 767px) {
+    .slider-description .sub-text {
+      font-size: 40px;
+    }
+    .search-bar {
+      flex-direction: column;
+      width: 95%;
+      padding: 10px;
+    }
+    .search-button {
+      width: 45px;
+      height: 45px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Small Screens & Phones (Below 480px) */
+  @media (max-width: 480px) {
+    .slider-description .sub-text {
+      font-size: 30px;
+    }
+    .search-bar {
+      width: 100%;
+    }
+    .search-button {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+  
