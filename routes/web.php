@@ -10,6 +10,7 @@ use App\Http\Controllers\PackageBookingController;
 use App\Http\Controllers\PackageItineraryBooknowController;
 use Inertia\Inertia;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\FlightSController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -24,6 +25,9 @@ Route::get('/booking', [BookingController::class, 'index'])->name('booking_index
 Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
 Route::get('/packages/itinerary', [PackageBookingController::class, 'index'])->name('package_itinerary');
 Route::get('/packages/itinerary/booking', [PackageItineraryBooknowController::class, 'index'])->name('package_itinerary_booking');
+Route::get('/flights', [FlightSController::class, 'index'])->name('flights_index');
+
+
 Route::get('admin/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
