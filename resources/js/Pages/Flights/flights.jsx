@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 // import flightBanner from "../src/assets/images/gallery/g1.jpg";
-import flightBanner from "../src/components/Banner/2.svg"; 
+import flightBanner from "../src/components/Banner/2.svg";
 
 import "./landing.css";
 import { Link } from "@inertiajs/react";
@@ -36,7 +36,7 @@ const FlightsLanding = () => {
                   <h4>Country, city or airport</h4>
                 </div>
               </div>
-              
+
               <div className="divider"></div>
 
               <div className="search-item">
@@ -72,7 +72,7 @@ const FlightsLanding = () => {
               </div>
 
               <button className="search-button">
-                <Link href={route('flight_search')}>
+                <Link href="">
                   <FontAwesomeIcon icon={faSearch} /> Search
                 </Link>
               </button>
