@@ -155,7 +155,7 @@ const FlightsLanding = () => {
                 >
                   <div className="search-row">
                     {/* From Field */}
-                    <div className="search-item">
+                    <div className="filter-item">
                       <div>
                         <p>From</p>
                         <h4>Washington D.C. (Any)</h4>
