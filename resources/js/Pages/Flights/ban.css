@@ -65,6 +65,17 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 100;
+    flex-wrap: nowrap;
+  }
+
+  .search-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures even spacing */
+    gap: 15px; /* Adds space between items */
+    flex-wrap: nowrap; /* Prevents items from breaking into a new line */
+    width: 100%;
+  
   }
   
   /* Cube Icon Container */
@@ -92,6 +103,7 @@
     gap: 15px;
     flex: 1;
     padding: 0 10px;
+    white-space: nowrap;
   }
   
   .search-item p {
@@ -150,6 +162,7 @@
     box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
+    flex-shrink: 0;
   }
   
   .search-button a {

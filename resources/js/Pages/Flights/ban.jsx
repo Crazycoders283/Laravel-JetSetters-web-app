@@ -147,7 +147,7 @@ const FlightsLanding = () => {
                 <div
                   className="search-bar"
                   style={{
-                    backgroundColor: '#ffffff', // White background
+                   // backgroundColor: '#ffffff',  White background
                     padding: '1rem', // Optional padding for spacing
                     borderRadius: '8px', // Optional rounded corners
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Optional shadow for depth
@@ -155,7 +155,7 @@ const FlightsLanding = () => {
                 >
                   <div className="search-row">
                     {/* From Field */}
-                    <div className="filter-item">
+                    <div className="search-item">
                       <div>
                         <p>From</p>
                         <h4>Washington D.C. (Any)</h4>

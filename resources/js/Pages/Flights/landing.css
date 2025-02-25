@@ -204,10 +204,14 @@
 /* Additional spacing for sections */
 .popular.py-5 {
   padding-bottom: 2rem !important; /* Reduced padding to account for button */
+  background-color: #029bc52a;
+  margin-top: 1.5%;
 }
 
 .popular.py-10 {
   padding-bottom: 2rem !important; /* Reduced padding to account for button */
+  background-color: #029bc52a;
+  margin-top: 1.5%;
 }/* Special offers badge */
 .special-offer {
   position: absolute;
