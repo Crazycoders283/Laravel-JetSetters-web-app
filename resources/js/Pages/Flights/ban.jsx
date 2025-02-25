@@ -71,7 +71,7 @@ const FlightsLanding = () => {
                   </div>
 
                   {/* Search Button */}
-                  <button className="col-span-5 bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+                  <button className="flightsearch">
                     <Link href="#">
                       <FontAwesomeIcon icon={faSearch} className="mr-2" />
                       Search
