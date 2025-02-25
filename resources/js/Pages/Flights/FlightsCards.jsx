@@ -1,6 +1,6 @@
 import React from "react";
 import "../Flights/Flightcard.css";
-import maskImage from "resources\js\Pages\src\packages\components\Cards\image 4.png";
+import maskImage from "resources\js\Pages\src\packages\components\Cards\image4.png";
 import "../Cards/europe";
 import { Head, Link, useForm } from "@inertiajs/react";
 import ValuedPartners from "resources\js\Pages\src\pages\Home\ValuedPartners.jsx";
