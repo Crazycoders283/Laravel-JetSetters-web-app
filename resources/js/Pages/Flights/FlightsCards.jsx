@@ -1,23 +1,22 @@
 import React from "react";
-import "../Flights/Flightcard.css";
-import maskImage from "../Cards/image 4.png";
-import "../Cards/europe";
-import { Head, Link, useForm } from "@inertiajs/react";
-import ValuedPartners from "resources\js\Pages\src\pages\Home\ValuedPartners.jsx";
-import Header from "resources\js\Pages\src\components\Common\Footer";
-import Footer from "resources\js\Pages\src\components\Common\Header";
+import "../Flights/Flightcard.css"; // Ensure this file exists
+import maskImage from "../src/packages/components/Cards/image 4.png" // Ensure correct image path
+import { Head, Link } from "@inertiajs/react"; // Removed useForm since it's not used
+// import ValuedPartners from "../src/"; 
+// import Header from "resources/js/Pages/src/components/Common/Header";
+// import Footer from "resources/js/Pages/src/components/Common/Footer";
 
 const cardsData = [
   {
     id: 1,
     image: maskImage,
-    title: "Bruj Khalifa",
-    subtitle:"Dubai",
+    title: "Burj Khalifa",
+    subtitle: "Dubai",
   },
   {
     id: 2,
     image: maskImage,
-    title: "Burj al Arab",
+    title: "Burj Al Arab",
     subtitle: "Dubai",
   },
   {
@@ -37,6 +36,7 @@ const cardsData = [
 const App = () => {
   return (
     <div className="main-container">
+      
       <div className="card-grid">
         {cardsData.map((card) => (
           <div className="card" key={card.id}>
@@ -45,12 +45,14 @@ const App = () => {
               <div className="overlay"></div> {/* Semi-transparent layer */}
               <div className="white-box">
                 <h3 className="card-title">{card.title}</h3>
-                {card.subtitle && <p className="card-subtitle">{card.subtitle}</p>} {/* Display subtitle if available */}
+                {card.subtitle && <p className="card-subtitle">{card.subtitle}</p>}
               </div>
             </div>
           </div>
         ))}
       </div>
+
+        
     </div>
   );
 };
