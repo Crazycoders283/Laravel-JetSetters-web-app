@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 // import flightBanner from "../src/assets/images/gallery/g1.jpg";
 import flightBanner from "../src/components/Banner/2.svg";
+import"./FlightsCards.jsx"
 
 import "./landing.css";
 import { Link } from "@inertiajs/react";
