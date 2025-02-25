@@ -222,7 +222,7 @@ const FlightsLanding = () => {
       </section>
 
       {/* Footer */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

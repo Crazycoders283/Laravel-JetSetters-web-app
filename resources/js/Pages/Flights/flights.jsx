@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Head, Link } from '@inertiajs/react';
 import { Container, Row, Col } from 'react-bootstrap';

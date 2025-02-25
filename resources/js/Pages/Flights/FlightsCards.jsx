@@ -1,12 +1,10 @@
 import React from "react";
-import "../Flights/Flightcard.css";
-import maskImage from "resources\js\Pages\src\packages\components\Cards\image4.png";
-import "../Cards/europe";
-import { Head, Link, useForm } from "@inertiajs/react";
-import ValuedPartners from "resources\js\Pages\src\pages\Home\ValuedPartners.jsx";
-import Header from "resources\js\Pages\src\components\Common\Footer";
-import Footer from "resources\js\Pages\src\components\Common\Header";
-// >>>>>>> 32aa14a77559668a6dead586f7df4d111f575ca3
+import "../Flights/Flightcard.css"; // Ensure this file exists
+import maskImage from "../src/packages/components/Cards/image 4.png" // Ensure correct image path
+import { Head, Link } from "@inertiajs/react"; // Removed useForm since it's not used
+// import ValuedPartners from "../src/"; 
+// import Header from "resources/js/Pages/src/components/Common/Header";
+// import Footer from "resources/js/Pages/src/components/Common/Footer";
 
 const cardsData = [
   {
