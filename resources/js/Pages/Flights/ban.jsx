@@ -154,6 +154,7 @@ const FlightsLanding = () => {
           </div>
 
           {/* To Field */}
+          <div class="d-flex flex-row">
           <div className="search-item">
             <p>To</p>
             <h4>Country, city or airport</h4>
@@ -185,6 +186,7 @@ const FlightsLanding = () => {
           <button className="search-btn">
             <FontAwesomeIcon icon={faSearch} /> Search
           </button>
+        </div>
         </div>
       </div>
     </div>
