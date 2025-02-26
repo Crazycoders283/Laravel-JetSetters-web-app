@@ -11,6 +11,7 @@ use App\Http\Controllers\PackageItineraryBooknowController;
 use Inertia\Inertia;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FlightSController;
+use App\Http\Controllers\FlightExploreMoreControoller;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -26,6 +27,7 @@ Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('bo
 Route::get('/packages/itinerary', [PackageBookingController::class, 'index'])->name('package_itinerary');
 Route::get('/packages/itinerary/booking', [PackageItineraryBooknowController::class, 'index'])->name('package_itinerary_booking');
 Route::get('/flights', [FlightSController::class, 'index'])->name('flights_index');
+Route::get('/flights/explore',[FlightExploreMoreControoller::class,"index"])->name('flight_explore_more');
 
 
 Route::get('admin/dashboard', function () {

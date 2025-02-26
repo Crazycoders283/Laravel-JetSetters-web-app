@@ -143,16 +143,18 @@ const FlightsLanding = () => {
               </div>
 
               {/* Search Bar Section with White Background */}
+              <div class="d-flex flex-row">
               <div className="search-bar-container">
       <div className="search-bar">
         <div className="search-row">
           {/* From Field */}
+          <div class="d-flex flex-row">
           <div className="search-item">
             <p>From</p>
             <h4>Washington D.C. (Any)</h4>
             <FontAwesomeIcon icon={faPlaneDeparture} className="icon" />
           </div>
-
+          </div>
           {/* To Field */}
           <div class="d-flex flex-row">
           <div className="search-item">
@@ -189,6 +191,7 @@ const FlightsLanding = () => {
         </div>
         </div>
       </div>
+    </div>
     </div>
 
             </Carousel.Caption>
