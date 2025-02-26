@@ -144,78 +144,51 @@ const FlightsLanding = () => {
 
               {/* Search Bar Section with White Background */}
               <div className="search-bar-container">
-                <div
-                  className="search-bar"
-                  style={{
-                   // backgroundColor: '#ffffff',  White background
-                    padding: '1rem', // Optional padding for spacing
-                    borderRadius: '8px', // Optional rounded corners
-                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Optional shadow for depth
-                  }}
-                >
-                  <div className="search-row">
-                    {/* From Field */}
-                    <div className="search-item">
-                      <div>
-                        <p>From</p>
-                        <h4>Washington D.C. (Any)</h4>
-                      </div>
-                      <FontAwesomeIcon icon={faPlaneDeparture} className="icon" />
-                    </div>
+      <div className="search-bar">
+        <div className="search-row">
+          {/* From Field */}
+          <div className="search-item">
+            <p>From</p>
+            <h4>Washington D.C. (Any)</h4>
+            <FontAwesomeIcon icon={faPlaneDeparture} className="icon" />
+          </div>
 
-                    {/* To Field */}
-                    <div className="filter-item">
-                      <div>
-                        <p>To</p>
-                        <h4>Country, city or airport</h4>
-                      </div>
-                      <FontAwesomeIcon
-                        icon={faPlaneDeparture}
-                        className="icon"
-                        style={{ transform: 'rotate(45deg)' }}
-                      />
-                    </div>
+          {/* To Field */}
+          <div className="search-item">
+            <p>To</p>
+            <h4>Country, city or airport</h4>
+            <FontAwesomeIcon icon={faPlaneDeparture} className="icon rotate" />
+          </div>
 
-                    {/* Depart Field */}
-                    <div className="filter-item">
-                      <div className="date-container">
-                        <div>
-                          <p>Depart</p>
-                          <h4>Add date</h4>
-                        </div>
-                        <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
-                      </div>
-                    </div>
+          {/* Depart Field */}
+          <div className="search-item">
+            <p>Depart</p>
+            <h4>Add date</h4>
+            <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+          </div>
 
-                    {/* Return Field */}
-                    <div className="filter-item">
-                      <div className="date-container">
-                        <div>
-                          <p>Return</p>
-                          <h4>Add date</h4>
-                        </div>
-                        <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
-                      </div>
-                    </div>
+          {/* Return Field */}
+          <div className="search-item">
+            <p>Return</p>
+            <h4>Add date</h4>
+            <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
+          </div>
 
-                    {/* Travellers and Cabin Class Field */}
-                    <div className="filter-item">
-                      <div>
-                        <p>Travellers and cabin class</p>
-                        <h4>1 Adult, Economy</h4>
-                      </div>
-                      <FontAwesomeIcon icon={faUsers} className="icon" />
-                    </div>
+          {/* Travelers and Cabin Class */}
+          <div className="search-item">
+            <p>Travellers and cabin class</p>
+            <h4>1 Adult, Economy</h4>
+            <FontAwesomeIcon icon={faUsers} className="icon" />
+          </div>
 
-                    {/* Search Button */}
-                    <button className="bg-white px-4 py-2 rounded shadow hover:bg-gray-100 transition">
-                      {/* <Link href={route('flight_search')}> Adjust route as needed */}
-                        <FontAwesomeIcon icon={faSearch} /> Search
-                      {/* </Link> */}
-                    </button>
-                  </div>
-                </div>
-              </div>
+          {/* Search Button */}
+          <button className="search-btn">
+            <FontAwesomeIcon icon={faSearch} /> Search
+          </button>
+        </div>
+      </div>
+    </div>
+
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
