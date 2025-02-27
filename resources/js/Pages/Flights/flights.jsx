@@ -1,7 +1,8 @@
 import React from 'react';
-import { Head, Link } from '@inertiajs/react';
+// import { Head, Link, router } from '@inertiajs/react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../src/components/Common/Footer/Footer';
+import { Head, Link, useForm } from '@inertiajs/react';
 
 // Import your existing components
 import Banner from './ban';
@@ -112,7 +113,7 @@ const Home = () => {
           </Row>
           <Cards data={flightDeals} />
           <div className="explore-more-container">
-            <button className="explore-more-btn">Explore More</button>
+            <button className="explore-more-btn"><Link className='text-white' href={route('flight_explore_more')}>Explore More</Link></button>
           </div>
         </Container>
       </section>
@@ -130,7 +131,7 @@ const Home = () => {
           </Row>
           <Cards data={airlines} />
           <div className="explore-more-container10">
-            <button className="explore-more-btn10">Explore More</button>
+            <button className="explore-more-btn10"><Link className='text-white' href={route('flight_explore_more')}>Explore More</Link></button>
           </div>
         </Container>
       </section>
