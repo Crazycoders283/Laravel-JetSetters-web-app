@@ -32,7 +32,6 @@ const FlightsLanding = () => {
                 </p>
               </div>
 
-<<<<<<< HEAD
               {/* Search Bar Section */}
               <div className="bg-white p-4 rounded-lg shadow-md">
                 <div className="grid grid-cols-5 gap-4 items-center">
@@ -80,60 +79,6 @@ const FlightsLanding = () => {
                   </button>
                 </div>
               </div>
-=======
-              {/* Search Bar Section with White Background */}
-              <div class="d-flex flex-row">
-              <div className="search-bar-container">
-      <div className="search-bar">
-        <div className="search-row">
-          {/* From Field */}
-          <div class="d-flex flex-row">
-          <div className="search-item">
-            <p>From</p>
-            <h4>Washington D.C. (Any)</h4>
-            <FontAwesomeIcon icon={faPlaneDeparture} className="icon" />
-          </div>
-          </div>
-          {/* To Field */}
-          <div class="d-flex flex-row">
-          <div className="search-item">
-            <p>To</p>
-            <h4>Country, city or airport</h4>
-            <FontAwesomeIcon icon={faPlaneDeparture} className="icon rotate" />
-          </div>
-
-          {/* Depart Field */}
-          <div className="search-item">
-            <p>Depart</p>
-            <h4>Add date</h4>
-            <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
-          </div>
-
-          {/* Return Field */}
-          <div className="search-item">
-            <p>Return</p>
-            <h4>Add date</h4>
-            <FontAwesomeIcon icon={faCalendarAlt} className="icon" />
-          </div>
-
-          {/* Travelers and Cabin Class */}
-          <div className="search-item">
-            <p>Travellers and cabin class</p>
-            <h4>1 Adult, Economy</h4>
-            <FontAwesomeIcon icon={faUsers} className="icon" />
-          </div>
-
-          {/* Search Button */}
-          <button className="search-btn">
-            <FontAwesomeIcon icon={faSearch} /> Search
-          </button>
-        </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
->>>>>>> f84d9855e2bff35787cbdf4f7ced0261f418a010
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
