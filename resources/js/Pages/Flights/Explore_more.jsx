@@ -1,219 +1,279 @@
-import React from 'react';
-import './Flightbooking.css';
+import React, { useState } from 'react';
+import './Booking.css';
 
-function Booking() {
+const Booking = () => {
+  const [selectedDate, setSelectedDate] = useState('Jan 03');
+  const [priceRange, setPriceRange] = useState([9277, 49658]);
+  
+  const dates = [
+    { date: 'Jan 03', price: '₹8927' },
+    { date: 'Jan 04', price: '₹9352' },
+    { date: 'Jan 05', price: '₹8352' },
+    { date: 'Jan 06', price: '₹5499' },
+    { date: 'Jan 07', price: '₹5460' },
+    { date: 'Jan 08', price: '₹5498' },
+    { date: 'Jan 09', price: '₹5184' },
+  ];
+
+  const flights = [
+    {
+      airline: 'SpiceJet',
+      flightNo: 'SG-8180',
+      departure: '23:30',
+      arrival: '10:20',
+      duration: '10h 50m',
+      price: 9277,
+      stops: '1-stop',
+      logo: '/images/spicejet.png',
+      seatsLeft: null
+    },
+    {
+      airline: 'Indigo',
+      flightNo: '6E-2768',
+      departure: '18:25',
+      arrival: '01:15',
+      duration: '06h 50m',
+      price: 9576,
+      stops: '1-stop',
+      logo: '/images/indigo.png',
+      seatsLeft: null
+    },
+    {
+      airline: 'Air India',
+      flightNo: 'AI-467',
+      departure: '18:00',
+      arrival: '21:05',
+      duration: '27h 05m',
+      price: 10801,
+      stops: '1-stop',
+      logo: '/images/airindia.png',
+      seatsLeft: 9
+    },
+    {
+      airline: 'Air India',
+      flightNo: 'AI-2371',
+      departure: '21:20',
+      arrival: '11:25',
+      duration: '14h 05m',
+      price: 11089,
+      stops: '1-stop',
+      logo: '/images/airindia.png',
+      seatsLeft: 2
+    }
+  ];
+
   return (
-    <div className="container">
-      <div className="grid">
-        {/* Fare Summary */}
-        <div className="fare-summary">
-          <h2>Fare Summary</h2>
-          <p className="traveller">1 Traveller</p>
-          <div className="fare-details">
-            <div className="fare-item">
-              <span>Fare Type</span>
-              <span className="text-green">Partially Refundable</span>
-            </div>
-            <div className="fare-item">
-              <span>Base Fare</span>
-              <span>₹4,226</span>
-            </div>
-            <div className="fare-item">
-              <span>Taxes & Fees</span>
-              <span>₹1,389</span>
-            </div>
-            <div className="fare-total">
-              <span>Total Amount</span>
-              <span>₹5,615</span>
-            </div>
-          </div>
+    <div className="flight-booking">
+      <div className="search-header">
+        <div className="route-selection">
+          <input type="text" value="Delhi" readOnly />
+          <button className="swap-button">⇄</button>
+          <input type="text" value="Mumbai" readOnly />
         </div>
-
-        {/* Flight Details */}
-        <div className="flight-details">
-          <div className="flight-header">
-            <div>
-              <h2>Hyderabad → New Delhi</h2>
-              <p className="date">Wednesday, Jan 15</p>
-            </div>
-            <button className="view-rules">View Fare Rules</button>
-          </div>
-          <div className="airline-info">
-            <img src="https://placehold.co/20x20" alt="Airline logo" />
-            <div>
-              <p className="airline-name">Akasa Air</p>
-              <p className="flight-info">QP 1405 | Economy | SAVER</p>
-            </div>
-          </div>
-          <div className="flight-times">
-            <div>
-              <p className="time">05:50</p>
-              <p className="location">Hyderabad, Rajiv Gandhi International Airport</p>
-            </div>
-            <div className="duration">
-              <p>2h 20m</p>
-              <i className="fas fa-arrow-right"></i>
-            </div>
-            <div>
-              <p className="time">08:10</p>
-              <p className="location">New Delhi, Indira Gandhi International Airport, Terminal T2</p>
-            </div>
-          </div>
-          <div className="baggage-info">
-            <div className="baggage-item">
-              <i className="fas fa-suitcase-rolling"></i>
-              <p>Cabin Baggage: 7 Kgs (1 piece only) / Adult</p>
-            </div>
-            <div className="baggage-item">
-              <i className="fas fa-suitcase"></i>
-              <p>Check-In Baggage: 15 Kgs (1 piece only) / Adult</p>
-            </div>
-          </div>
-          <div className="add-baggage">
-            <button>ADD BAGGAGE</button>
-          </div>
+        
+        <div className="date-selection">
+          <input type="text" value="Jan 03" readOnly />
         </div>
+        
+        <div className="passenger-selection">
+          <input type="text" value="1 Adult, Economy" readOnly />
+        </div>
+        
+        <button className="search-button">Search</button>
       </div>
 
-      {/* Refund on Cancellation */}
-      <div className="refund-section">
-        <h2>Refund on Cancellation</h2>
-        <p className="route">VTZ - DEL</p>
-        <div className="refund-timeline">
-          <div className="timeline">
-            <div className="timeline-item">
-              <span>₹2106 refund</span>
-              <span>₹1036 refund</span>
-              <span>₹1036 refund</span>
-              <span>Non-refundable</span>
-            </div>
-            <div className="timeline-bar">
-              <div className="bar"></div>
-              <div className="markers">
-                <span className="marker yellow"></span>
-                <span className="marker yellow"></span>
-                <span className="marker yellow"></span>
-                <span className="marker red"></span>
+      <div className="special-fares">
+        <span>Special Fares (Optional):</span>
+        <button className="fare-type">Student</button>
+        <button className="fare-type">Senior Citizen</button>
+      </div>
+
+      <div className="main-content">
+        <div className="filters-sidebar">
+          <h3>FILTER</h3>
+          
+          <div className="filter-section">
+            <h4>Popular Filters</h4>
+            <label className="checkbox-item">
+              <input type="checkbox" defaultChecked />
+              <span>Nonstop</span>
+            </label>
+            <label className="checkbox-item">
+              <input type="checkbox" />
+              <span>Morning Departure</span>
+            </label>
+          </div>
+
+          <div className="filter-section">
+            <h4>Price Range</h4>
+            <div className="price-range-slider">
+              <input 
+                type="range" 
+                min="9277" 
+                max="49658" 
+                value={priceRange[1]}
+                onChange={(e) => setPriceRange([priceRange[0], e.target.value])}
+              />
+              <div className="price-labels">
+                <span>Rs. {priceRange[0]}</span>
+                <span>Rs. {priceRange[1]}</span>
               </div>
             </div>
           </div>
-          <div className="timeline-dates">
-            <p>Now</p>
-            <p>12 Jan</p>
-            <p>14 Jan</p>
-            <p>15 Jan</p>
+
+          <div className="filter-section">
+            <h4>Stops</h4>
+            <div className="stops-buttons">
+              <button className="stop-button">
+                <div>0</div>
+                <div>Nonstop</div>
+              </button>
+              <button className="stop-button">
+                <div>1</div>
+                <div>Stop</div>
+              </button>
+              <button className="stop-button">
+                <div>2+</div>
+                <div>Stops</div>
+              </button>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Departure from Delhi</h4>
+            <div className="time-grid">
+              <div className="time-slot">
+                <input type="checkbox" id="before-6am" />
+                <label htmlFor="before-6am">Before<br />6 AM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="6am-12pm" />
+                <label htmlFor="6am-12pm">6 AM -<br />12 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="12pm-6pm" />
+                <label htmlFor="12pm-6pm">12 PM -<br />6 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="after-6pm" />
+                <label htmlFor="after-6pm">After<br />6 PM</label>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Arrival at Mumbai</h4>
+            <div className="time-grid">
+              <div className="time-slot">
+                <input type="checkbox" id="before-6am-arr" />
+                <label htmlFor="before-6am-arr">Before<br />6 AM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="6am-12pm-arr" />
+                <label htmlFor="6am-12pm-arr">6 AM -<br />12 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="12pm-6pm-arr" />
+                <label htmlFor="12pm-6pm-arr">12 PM -<br />6 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="after-6pm-arr" />
+                <label htmlFor="after-6pm-arr">After<br />6 PM</label>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Airlines</h4>
+            <div className="airlines-list">
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>SpiceJet</span>
+                <span className="price">₹9277</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>Indigo</span>
+                <span className="price">₹9576</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>Air India</span>
+                <span className="price">₹10801</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" />
+                <span>Air India Express</span>
+                <span className="price">₹9245</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>AkasaAir</span>
+                <span className="price">₹8675</span>
+              </label>
+            </div>
+            <button className="more-button">More +</button>
           </div>
         </div>
-        <p className="travel-info">Not sure of your travel?</p>
-        <p className="flexibility-info">Get full flexibility with ixigo add-ons</p>
-        <div className="addon blue">
-          <div className="addon-info">
-            <p className="addon-title">Free Cancellation with Assured</p>
-            <p className="addon-desc">Instant refund of approx. ₹5615</p>
+
+        <div className="flights-content">
+          <div className="sort-bar">Sort By:</div>
+          <div className="date-slider">
+            {dates.map((date) => (
+              <div 
+                key={date.date} 
+                className={`date-card ${selectedDate === date.date ? 'selected' : ''}`}
+                onClick={() => setSelectedDate(date.date)}
+              >
+                <div className="date">{date.date}</div>
+                <div className="price">{date.price}</div>
+              </div>
+            ))}
           </div>
-          <button className="addon-button">Add</button>
-        </div>
-        <div className="addon purple">
-          <div className="addon-info">
-            <p className="addon-title">Free Cancellation + Rescheduling with Assured Flex</p>
-            <p className="addon-desc">Instant refund of approx. ₹5615</p>
-            <p className="addon-desc">Full Flexibility on rescheduling. Change date, airline & even sector for free</p>
+
+          <div className="flight-list">
+            {flights.map((flight) => (
+              <div key={flight.flightNo} className="flight-card">
+                <div className="airline-info">
+                  <img src={flight.logo} alt={flight.airline} />
+                  <div>
+                    <div className="airline-name">{flight.airline}</div>
+                    <div className="flight-number">{flight.flightNo}</div>
+                  </div>
+                </div>
+
+                <div className="time-info">
+                  <div className="departure">
+                    <div className="time">{flight.departure}</div>
+                    <div className="city">Delhi</div>
+                  </div>
+                  
+                  <div className="duration">
+                    <div className="duration-time">{flight.duration}</div>
+                    <div className="stops">{flight.stops}</div>
+                  </div>
+
+                  <div className="arrival">
+                    <div className="time">{flight.arrival}</div>
+                    <div className="city">Mumbai</div>
+                  </div>
+                </div>
+
+                <div className="price-section">
+                  <div className="price">₹ {flight.price}</div>
+                  <button className="more-fare">+ More Fare</button>
+                  <button className="book-now">BOOK NOW</button>
+                  {flight.seatsLeft && (
+                    <div className="seats-left">{flight.seatsLeft} Seats left</div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
-          <button className="addon-button">Add</button>
         </div>
       </div>
-      <div className="container">
-      <div className="section">
-        <h2>Traveller Details</h2>
-        <div className="login-info">
-          <i className="fas fa-user"></i>
-          <a href="#">Log in to view your saved traveller list, unlock amazing deals & much more!</a>
-          <a href="#" className="login-now">LOGIN NOW</a>
-        </div>
-        <div className="adult-info">
-          <i className="fas fa-user"></i>
-          <span>ADULT (12 yrs+) 1/1 added</span>
-        </div>
-      </div>
-      <div className="section">
-        <div className="checkbox-info">
-          <input type="checkbox" />
-          <span>Adya Paliwal</span>
-        </div>
-        <div className="input-group">
-          <input type="text" placeholder="Adya" />
-          <input type="text" placeholder="Paliwal" />
-          <div className="gender-buttons">
-            <button className="male">MALE</button>
-            <button className="female">FEMALE</button>
-          </div>
-        </div>
-        <div className="input-group">
-          <div>
-            <label>Country Code</label>
-            <select>
-              <option>India(91)</option>
-            </select>
-          </div>
-          <div>
-            <label>Mobile No</label>
-            <input type="text" value="7520150859" />
-          </div>
-          <div>
-            <label>Email</label>
-            <input type="text" placeholder="Email(Optional)" />
-          </div>
-        </div>
-        <div className="checkbox-info">
-          <input type="checkbox" />
-          <span>I require wheelchair <span className="optional">(Optional)</span></span>
-        </div>
-        <a href="#" className="add-new-adult">+ ADD NEW ADULT</a>
-      </div>
-      <div className="section">
-        <h3>Booking details will be sent to</h3>
-        <div className="input-group">
-          <div>
-            <label>Country Code</label>
-            <select>
-              <option>India(91)</option>
-            </select>
-          </div>
-          <div>
-            <label>Mobile No</label>
-            <input type="text" value="7520150859" />
-          </div>
-          <div>
-            <label>Email</label>
-            <input type="text" value="adyapaliwal007@gmail.com" />
-          </div>
-        </div>
-        <a href="#" className="booking-alerts">Booking details & alerts will also be sent to Adya Paliwal</a>
-        <div className="checkbox-info">
-          <input type="checkbox" />
-          <span>Confirm and save billing details to your profile</span>
-        </div>
-      </div>
-      <div className="section">
-        <div className="vip-info">
-          <i className="fas fa-plane-departure"></i>
-          <span>Fly Like a VIP @ Just $50</span>
-        </div>
-        <p>Be amongst the first to check-in and get your bags tagged with priority status with Akasa Air Priority Check-in & Bag Services.</p>
-        <div className="priority-info">
-          <i className="fas fa-check-circle"></i>
-          <span>Priority Check-in</span>
-          <i className="fas fa-plus"></i>
-          <i className="fas fa-check-circle"></i>
-          <span>Priority Bag Service</span>
-          <span className="price">$50</span>
-          <button className="add-button">+ ADD</button>
-        </div>
-      </div>
-      <button className="continue-button">CONTINUE</button>
-    </div>
     </div>
   );
-}
+};
 
 export default Booking;
