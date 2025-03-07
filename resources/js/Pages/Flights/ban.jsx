@@ -72,7 +72,7 @@ const FlightsLanding = () => {
 
                   {/* Search Button */}
                   <button className="flightsearch">
-                    <Link href="#">
+                    <Link href={route('flights_booking')}>
                       <FontAwesomeIcon icon={faSearch} className="mr-2" />
                       Search
                     </Link>

@@ -1,316 +1,279 @@
-"use client"
-
-import { useState } from "react"
-import "./Booking.css"
-
+import React, { useState } from 'react';
+import './Booking.css';
+import { Link } from '@inertiajs/react';
 const Booking = () => {
-  const [priceRange, setPriceRange] = useState([9277, 49558])
-
-  const dateOptions = [
-    { date: "Jan 03", price: "₹8927" },
-    { date: "Jan 04", price: "₹6352" },
-    { date: "Jan 05", price: "₹6352" },
-    { date: "Jan 06", price: "₹5499" },
-    { date: "Jan 07", price: "₹5460" },
-    { date: "Jan 08", price: "₹5498" },
-    { date: "Jan 09", price: "₹5184" },
-  ]
+  const [selectedDate, setSelectedDate] = useState('Jan 03');
+  const [priceRange, setPriceRange] = useState([9277, 49658]);
+  
+  const dates = [
+    { date: 'Jan 03', price: '₹8927' },
+    { date: 'Jan 04', price: '₹9352' },
+    { date: 'Jan 05', price: '₹8352' },
+    { date: 'Jan 06', price: '₹5499' },
+    { date: 'Jan 07', price: '₹5460' },
+    { date: 'Jan 08', price: '₹5498' },
+    { date: 'Jan 09', price: '₹5184' },
+  ];
 
   const flights = [
     {
-      airline: "SpiceJet",
-      code: "SG-8183",
-      departureTime: "23:30",
-      departureCity: "Delhi",
-      arrivalTime: "10:20",
-      arrivalCity: "Mumbai",
-      duration: "10h 50m",
-      stops: "1-stop",
-      price: "₹9,277",
-      discount: "Rs.350",
-      seatsLeft: null,
+      airline: 'SpiceJet',
+      flightNo: 'SG-8180',
+      departure: '23:30',
+      arrival: '10:20',
+      duration: '10h 50m',
+      price: 9277,
+      stops: '1-stop',
+      logo: '/images/spicejet.png',
+      seatsLeft: null
     },
     {
-      airline: "Indigo",
-      code: "6E-2766",
-      departureTime: "18:25",
-      departureCity: "Delhi",
-      arrivalTime: "01:15",
-      arrivalCity: "Mumbai",
-      duration: "06h 50m",
-      stops: "1-stop",
-      price: "₹9,576",
-      discount: "Rs.300",
-      seatsLeft: null,
+      airline: 'Indigo',
+      flightNo: '6E-2768',
+      departure: '18:25',
+      arrival: '01:15',
+      duration: '06h 50m',
+      price: 9576,
+      stops: '1-stop',
+      logo: '/images/indigo.png',
+      seatsLeft: null
     },
     {
-      airline: "Air India",
-      code: "AI-467",
-      departureTime: "18:00",
-      departureCity: "Delhi",
-      arrivalTime: "21:05",
-      arrivalCity: "Mumbai",
-      duration: "27h 05m",
-      stops: "1-stop",
-      price: "₹10,801",
-      discount: "Rs.350",
-      seatsLeft: 9,
+      airline: 'Air India',
+      flightNo: 'AI-467',
+      departure: '18:00',
+      arrival: '21:05',
+      duration: '27h 05m',
+      price: 10801,
+      stops: '1-stop',
+      logo: '/images/airindia.png',
+      seatsLeft: 9
     },
     {
-      airline: "Indigo",
-      code: "6E-6368",
-      departureTime: "18:45",
-      departureCity: "Delhi",
-      arrivalTime: "00:35",
-      arrivalCity: "Mumbai",
-      duration: "05h 50m",
-      stops: "1-stop",
-      price: "₹10,846",
-      discount: "Rs.300",
-      seatsLeft: null,
-    },
-    {
-      airline: "Air India",
-      code: "AI-2671",
-      departureTime: "21:20",
-      departureCity: "Delhi",
-      arrivalTime: "11:25",
-      arrivalCity: "Mumbai",
-      duration: "14h 05m",
-      stops: "1-stop",
-      price: "₹11,089",
-      discount: "Rs.350",
-      seatsLeft: 2,
-    },
-  ]
+      airline: 'Air India',
+      flightNo: 'AI-2371',
+      departure: '21:20',
+      arrival: '11:25',
+      duration: '14h 05m',
+      price: 11089,
+      stops: '1-stop',
+      logo: '/images/airindia.png',
+      seatsLeft: 2
+    }
+  ];
 
   return (
     <div className="flight-booking">
-      {/* Filter Sidebar */}
-      <div className="sidebar">
-        <div className="sidebar-header">FILTER</div>
-
-        {/* Popular Filters */}
-        <div className="filter-section">
-          <h3>Popular Filters</h3>
-          <div className="checkbox-group">
-            <label>
-              <input type="checkbox" defaultChecked /> Nonstop
-            </label>
-            <label>
-              <input type="checkbox" /> Morning Departure
-            </label>
-            <label>
-              <input type="checkbox" defaultChecked /> SpiceJet
-            </label>
-            <label>
-              <input type="checkbox" defaultChecked /> Indigo
-            </label>
-            <label>
-              <input type="checkbox" defaultChecked /> Air India
-            </label>
-            <label>
-              <input type="checkbox" defaultChecked /> Air India Express
-            </label>
-            <label>
-              <input type="checkbox" defaultChecked /> AkasaAir
-            </label>
-          </div>
+      <div className="search-header">
+        <div className="route-selection">
+          <input type="text" value="Delhi" readOnly />
+          <button className="swap-button">⇄</button>
+          <input type="text" value="Mumbai" readOnly />
         </div>
-
-        {/* Price Range */}
-        <div className="filter-section">
-          <h3>Price Range</h3>
-          <input
-            type="range"
-            min="9277"
-            max="49558"
-            value={priceRange[1]}
-            onChange={(e) => setPriceRange([9277, Number.parseInt(e.target.value)])}
-          />
-          <div className="price-range-label">
-            Rs. {priceRange[0]} - Rs.{priceRange[1]}
-          </div>
+        
+        <div className="date-selection">
+          <input type="text" value="Jan 03" readOnly />
         </div>
-
-        {/* Stops */}
-        <div className="filter-section">
-          <h3>Stops</h3>
-          <div className="stops-buttons">
-            <button className="stop-button active">
-              0<br />
-              Nonstop
-            </button>
-            <button className="stop-button">
-              1<br />
-              Stop
-            </button>
-            <button className="stop-button">
-              2+
-              <br />
-              Stop
-            </button>
-          </div>
+        
+        <div className="passenger-selection">
+          <input type="text" value="1 Adult, Economy" readOnly />
         </div>
-
-        {/* Departure from Delhi */}
-        <div className="filter-section">
-          <h3>Departure from Delhi</h3>
-          <div className="time-filter">
-            <div className="time-option">
-              Before
-              <br />6 AM
-            </div>
-            <div className="time-option">
-              6 AM -<br />
-              12 PM
-            </div>
-            <div className="time-option">
-              12 PM -<br />6 PM
-            </div>
-            <div className="time-option">
-              After
-              <br />6 PM
-            </div>
-          </div>
-        </div>
-
-        {/* Arrival at Mumbai */}
-        <div className="filter-section">
-          <h3>Arrival at Mumbai</h3>
-          <div className="time-filter">
-            <div className="time-option">
-              Before
-              <br />6 AM
-            </div>
-            <div className="time-option">
-              6 AM -<br />
-              12 PM
-            </div>
-            <div className="time-option">
-              12 PM -<br />6 PM
-            </div>
-            <div className="time-option">
-              After
-              <br />6 PM
-            </div>
-          </div>
-        </div>
-
-        {/* Flight Quality */}
-        <div className="filter-section">
-          <h3>Flight Quality</h3>
-          <div className="checkbox-group">
-            <label>
-              <input type="checkbox" /> Show Wi-Fi flights only
-            </label>
-            <label>
-              <input type="checkbox" /> Show Red-Eyes
-            </label>
-          </div>
-        </div>
-
-        {/* Airlines */}
-        <div className="filter-section">
-          <h3>Airlines</h3>
-          <div className="airline-options">
-            <div className="airline-option">
-              <label>
-                <input type="checkbox" defaultChecked />
-                <span className="airline-color spicejet"></span>
-                SpiceJet
-              </label>
-              <span className="airline-price">₹ 9277</span>
-            </div>
-            <div className="airline-option">
-              <label>
-                <input type="checkbox" defaultChecked />
-                <span className="airline-color indigo"></span>
-                Indigo
-              </label>
-              <span className="airline-price">₹ 9576</span>
-            </div>
-          </div>
-        </div>
+        
+        <button className="search-button">Search</button>
       </div>
 
-      {/* Main Content */}
-      <div className="main-content">
-        <div className="sort-by">Sort By:</div>
+      <div className="special-fares">
+        <span>Special Fares (Optional):</span>
+        <button className="fare-type">Student</button>
+        <button className="fare-type">Senior Citizen</button>
+      </div>
 
-        {/* Date Navigation */}
-        <div className="date-navigation">
-          <button className="nav-button">&lt;</button>
-          <div className="date-options">
-            {dateOptions.map((option, index) => (
-              <div key={index} className={`date-option ${index === 0 ? "active" : ""}`}>
-                <div className="date">{option.date}</div>
-                <div className="price">{option.price}</div>
+      <div className="main-content">
+        <div className="filters-sidebar">
+          <h3>FILTER</h3>
+          
+          <div className="filter-section">
+            <h4>Popular Filters</h4>
+            <label className="checkbox-item">
+              <input type="checkbox" defaultChecked />
+              <span>Nonstop</span>
+            </label>
+            <label className="checkbox-item">
+              <input type="checkbox" />
+              <span>Morning Departure</span>
+            </label>
+          </div>
+
+          <div className="filter-section">
+            <h4>Price Range</h4>
+            <div className="price-range-slider">
+              <input 
+                type="range" 
+                min="9277" 
+                max="49658" 
+                value={priceRange[1]}
+                onChange={(e) => setPriceRange([priceRange[0], e.target.value])}
+              />
+              <div className="price-labels">
+                <span>Rs. {priceRange[0]}</span>
+                <span>Rs. {priceRange[1]}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Stops</h4>
+            <div className="stops-buttons">
+              <button className="stop-button">
+                <div>0</div>
+                <div>Nonstop</div>
+              </button>
+              <button className="stop-button">
+                <div>1</div>
+                <div>Stop</div>
+              </button>
+              <button className="stop-button">
+                <div>2+</div>
+                <div>Stops</div>
+              </button>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Departure from Delhi</h4>
+            <div className="time-grid">
+              <div className="time-slot">
+                <input type="checkbox" id="before-6am" />
+                <label htmlFor="before-6am">Before<br />6 AM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="6am-12pm" />
+                <label htmlFor="6am-12pm">6 AM -<br />12 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="12pm-6pm" />
+                <label htmlFor="12pm-6pm">12 PM -<br />6 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="after-6pm" />
+                <label htmlFor="after-6pm">After<br />6 PM</label>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Arrival at Mumbai</h4>
+            <div className="time-grid">
+              <div className="time-slot">
+                <input type="checkbox" id="before-6am-arr" />
+                <label htmlFor="before-6am-arr">Before<br />6 AM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="6am-12pm-arr" />
+                <label htmlFor="6am-12pm-arr">6 AM -<br />12 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="12pm-6pm-arr" />
+                <label htmlFor="12pm-6pm-arr">12 PM -<br />6 PM</label>
+              </div>
+              <div className="time-slot">
+                <input type="checkbox" id="after-6pm-arr" />
+                <label htmlFor="after-6pm-arr">After<br />6 PM</label>
+              </div>
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h4>Airlines</h4>
+            <div className="airlines-list">
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>SpiceJet</span>
+                <span className="price">₹9277</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>Indigo</span>
+                <span className="price">₹9576</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>Air India</span>
+                <span className="price">₹10801</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" />
+                <span>Air India Express</span>
+                <span className="price">₹9245</span>
+              </label>
+              <label className="airline-option">
+                <input type="checkbox" defaultChecked />
+                <span>AkasaAir</span>
+                <span className="price">₹8675</span>
+              </label>
+            </div>
+            <button className="more-button">More +</button>
+          </div>
+        </div>
+
+        <div className="flights-content">
+          <div className="sort-bar">Sort By:</div>
+          <div className="date-slider">
+            {dates.map((date) => (
+              <div 
+                key={date.date} 
+                className={`date-card ${selectedDate === date.date ? 'selected' : ''}`}
+                onClick={() => setSelectedDate(date.date)}
+              >
+                <div className="date">{date.date}</div>
+                <div className="price">{date.price}</div>
               </div>
             ))}
           </div>
-          <button className="nav-button">&gt;</button>
-          <button className="calendar-button">📅</button>
-        </div>
 
-        {/* Column Headers */}
-        <div className="column-headers">
-          <div>AIRLINES</div>
-          <div>DEPARTURE</div>
-          <div>DURATION</div>
-          <div>ARRIVE</div>
-          <div>PRICE</div>
-          <div>RECOMMENDED</div>
-        </div>
-
-        {/* Flight Listings */}
-        <div className="flight-listings">
-          {flights.map((flight, index) => (
-            <div key={index} className="flight-card">
-              <div className="flight-info">
-                <div className="airline">
-                  <div className={`airline-logo ${flight.airline.toLowerCase().replace(" ", "")}`}></div>
+          <div className="flight-list">
+            {flights.map((flight) => (
+              <div key={flight.flightNo} className="flight-card">
+                <div className="airline-info">
+                  <img src={flight.logo} alt={flight.airline} />
                   <div>
                     <div className="airline-name">{flight.airline}</div>
-                    <div className="flight-code">{flight.code}</div>
+                    <div className="flight-number">{flight.flightNo}</div>
                   </div>
                 </div>
-                <div className="departure">
-                  <div className="time">{flight.departureTime}</div>
-                  <div className="city">{flight.departureCity}</div>
-                </div>
-                <div className="duration">
-                  <div>{flight.duration}</div>
-                  <div className="stops">{flight.stops}</div>
-                </div>
-                <div className="arrival">
-                  <div className="time">{flight.arrivalTime}</div>
-                  <div className="city">{flight.arrivalCity}</div>
-                </div>
-                <div className="price-booking">
-                  <div className="price">{flight.price}</div>
-                  <button className="book-now">BOOK NOW</button>
-                  <div className="more-fare">+ More Fare</div>
-                  {flight.seatsLeft && <div className="seats-left">{flight.seatsLeft} Seats Left</div>}
-                </div>
-              </div>
-              <div className="flight-details">
-                <div className="discount">BOOKNOW: Get extra {flight.discount} instant discount on this flight</div>
-                <div className="flight-detail-link">Flight Detail</div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Pagination */}
-        <div className="pagination">
-          <button className="page-button active">&lt;</button>
-          <button className="page-button">1</button>
+                <div className="time-info">
+                  <div className="departure">
+                    <div className="time">{flight.departure}</div>
+                    <div className="city">Delhi</div>
+                  </div>
+                  
+                  <div className="duration">
+                    <div className="duration-time">{flight.duration}</div>
+                    <div className="stops">{flight.stops}</div>
+                  </div>
+
+                  <div className="arrival">
+                    <div className="time">{flight.arrival}</div>
+                    <div className="city">Mumbai</div>
+                  </div>
+                </div>
+
+                <div className="price-section">
+                  <div className="price">₹ {flight.price}</div>
+                  <button className="more-fare">+ More Fare</button>
+                  <button className="book-now"><Link href={route('booking_index')} className='text-white'> BOOK NOW</Link></button>
+                  {flight.seatsLeft && (
+                    <div className="seats-left">{flight.seatsLeft} Seats left</div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Booking
-
+export default Booking;
