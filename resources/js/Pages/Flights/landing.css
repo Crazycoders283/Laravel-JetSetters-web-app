@@ -143,6 +143,7 @@
   position: relative;
   height: auto;
  /* background-color: #029bc52a;*/
+ background-color: transparent;
   padding: 0;
 }
 
@@ -153,6 +154,7 @@
   position: relative;
   height: auto;
   /*background-color: #029bc52a;*/
+  background-color: transparent;
   padding: 0;
 }
 
