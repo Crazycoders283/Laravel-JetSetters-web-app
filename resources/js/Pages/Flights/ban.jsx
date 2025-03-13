@@ -434,7 +434,7 @@ const FlightSearchBar = () => {
     <div className="search-bar">
       <div className="filter-item">
         <div>
-          <p>Location</p>
+          <p>From</p>
           <h4>USA</h4>
         </div>
       </div>
@@ -443,10 +443,21 @@ const FlightSearchBar = () => {
 
       <div className="filter-item">
         <div>
-          <p>Packages</p>
-          <h4>Select Package</h4>
+          <p>To</p>
+          <h4>Select </h4>
         </div>
       </div>
+      <div className="divider"></div>
+
+      <div className="filter-item">
+        <div>
+          <p>Return</p>
+          <h4>USA</h4>
+        </div>
+      </div>
+
+      
+
 
       <div className="divider"></div>
 
@@ -580,15 +591,15 @@ const FlightsLanding = () => {
             position: relative;
           }
           
-          .flight-slider .carousel::after {
-            content: "";
-            background-color: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
+          // .flight-slider .carousel::after {
+          //   content: "";
+          //   background-color: rgba(0, 0, 0, 0.6);
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   width: 100%;
+          //   height: 100%;
+          // }
           
           .flight-slider .carousel .carousel-item .carousel-caption {
             z-index: 9;
@@ -721,6 +732,7 @@ const FlightsLanding = () => {
 
       {/* Flight Slider Section */}
       <section className="flight-slider">
+        
         <Carousel variant="white">
           <Carousel.Item>
             <img src={flightBanner} className="d-block w-100" alt="Flight Search" />
@@ -732,10 +744,12 @@ const FlightsLanding = () => {
                   <span>Our Cheapest Flight Search</span>
                 </p>
               </div>
+              
 
               {/* Search Bar Component */}
               <FlightSearchBar />
             </Carousel.Caption>
+            
           </Carousel.Item>
         </Carousel>
       </section>
