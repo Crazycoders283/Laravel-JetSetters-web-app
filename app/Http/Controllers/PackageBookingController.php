@@ -13,4 +13,17 @@ class PackageBookingController extends Controller
 
         return Inertia::render('src/packages/Home/packagecard');
     }
+
+    public function itinerary()
+    {
+
+
+        return Inertia::render('src/pages/Home/searchpage');
+    }
+    public function itinerary_view()
+    {
+
+
+        return Inertia::render('src/pages/Home/Tours');
+    }
 }

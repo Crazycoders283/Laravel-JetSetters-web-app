@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Booking.css';
-
+import { Head, Link, useForm } from '@inertiajs/react';
 const Booking = () => {
   const [selectedDate, setSelectedDate] = useState('Jan 03');
   const [priceRange, setPriceRange] = useState([9277, 49658]);
@@ -262,7 +262,7 @@ const Booking = () => {
                 <div className="price-section">
                   <div className="price">₹ {flight.price}</div>
                   <button className="more-fare">+ More Fare</button>
-                  <button className="book-now">BOOK NOW</button>
+                  <button className="book-now"><Link href={route('booking_now_index')}>BOOK NOW-2222222</Link></button>
                   {flight.seatsLeft && (
                     <div className="seats-left">{flight.seatsLeft} Seats left</div>
                   )}

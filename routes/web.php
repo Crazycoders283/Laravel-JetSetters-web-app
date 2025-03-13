@@ -29,10 +29,10 @@ Route::get('/packages/itinerary', [PackageBookingController::class, 'index'])->n
 Route::get('/packages/itinerary/booking', [PackageItineraryBooknowController::class, 'index'])->name('package_itinerary_booking');
 Route::get('/flights', [FlightSController::class, 'index'])->name('flights_index');
 Route::get('/flights/booking', [PaymentDetailsController::class, 'index'])->name('flights_booking');
-Route::get('/flights/booking/booknow', [PaymentDetailsController::class, 'booking_index'])->name('booking_index');
+Route::get('/flights/booking/booknow', [PaymentDetailsController::class, 'booking_index'])->name('booking_now_index');
 Route::get('/flights/explore',[FlightExploreMoreControoller::class,"index"])->name('flight_explore_more');
-
-
+Route::get('/itinerary', [PackageBookingController::class, 'itinerary'])->name('itinerary');
+Route::get('/itinerary/view', [PackageBookingController::class, 'itinerary_view'])->name('itinerary_view');
 Route::get('admin/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

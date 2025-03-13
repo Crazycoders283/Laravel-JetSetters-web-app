@@ -90,7 +90,7 @@ const CruisePackageCard = ({ cruise }) => {
           <span>Sailing Dates: </span>
           {cruise.dates}
         </p>
-        <button className="view-itinerary-btn"><Link href={route('booking_now')}>View Itinerary</Link></button>
+        <button className="view-itinerary-btn"><Link href={route('itinerary_view')}>View Itinerary</Link></button>
       </div>
     </div>
   );

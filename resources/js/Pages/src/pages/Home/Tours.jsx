@@ -401,13 +401,7 @@ const Tours = () => {
                       <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
                       <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
                     </div>
-                    <button
-                      className="book-now-btn"
-
-                    >
-                      <Link href={route('booking_now')}></Link>
-                      BOOK NOW
-                    </button>
+                    
                   </div>
                 </div>
               </div>

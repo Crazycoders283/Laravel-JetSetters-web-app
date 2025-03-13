@@ -91,7 +91,7 @@ const Banner = () => {
 
             {/* Book Now Button */}
             <div className="book-now-container">
-              <button className="book-now-btn"><Link href={route('booking_index')}>BOOK NOW</Link></button>
+              <button className="book-now-btn"><Link href={route('itinerary')}>BOOK NOW---Home</Link></button>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
