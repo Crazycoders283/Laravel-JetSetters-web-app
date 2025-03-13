@@ -61,11 +61,7 @@ const PaymentPage = () => {
             <h2 className="text-xl font-semibold mb-4">Popular EMI Plans</h2>
             <div className="flex gap-3 mb-4">
               <button
-                className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
-                  selectedEMI === 'credit'
-                    ? 'bg-blue-50 text-blue-600 border border-blue-200'
-                    : 'border border-gray-200 text-gray-700 hover:bg-gray-50'
-                }`}
+                className= "Credit"
                 onClick={() => setSelectedEMI('credit')}
               >
                 Credit Card

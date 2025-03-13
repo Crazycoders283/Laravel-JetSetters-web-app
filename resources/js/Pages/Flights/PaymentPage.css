@@ -192,3 +192,11 @@ body {
 .chevron-icon {
   color: #4b5563;
 }
+
+.Credit{
+  background-color: #055B75;
+  color: #ffffff;
+  width: 50%;
+  border-radius: 9px;
+
+}
