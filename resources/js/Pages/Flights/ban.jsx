@@ -481,8 +481,8 @@ const FlightSearchBar = () => {
       </div>
 
       {/* Search Button */}
-      <button className="search-btn">
-        <FontAwesomeIcon icon={faSearch} />
+      <button className="search-btn"><Link href={route('flight_explore_more')}>
+        <FontAwesomeIcon icon={faSearch} /></Link>
       </button>
     </div>
   );
