@@ -13,15 +13,19 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FlightSController;
 use App\Http\Controllers\FlightExploreMoreControoller;
 use App\Http\Controllers\PaymentDetailsController;
+use App\Http\Conntrollers\HomeController;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-})->name('home');
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// })->name('home');
+
+
+Route::get('/', [PackagesController::class, 'home'])->name('home');
 Route::get('/packages', [PackagesController::class, 'index'])->name('package_index');
 Route::get('/booking', [BookingController::class, 'index'])->name('booking_index');
 Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
