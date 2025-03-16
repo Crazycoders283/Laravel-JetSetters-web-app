@@ -258,89 +258,206 @@ export default Tours;*/
 //for Api fecthing css styles
 
 
+// import React, { useState, useEffect } from "react";
+// import Itinerary from "./Itinerary";
+// import ItineraryReviewsPage from "./ItineraryReviewsPage"; // Import the file
+// import "./Tour.css"; // CSS file for styling
+// import { Head, Link, useForm } from '@inertiajs/react';
+// import Header from "../../components/Common/Header/Header"; // Importing Header component
+// import Footer from "../../components/Common/Footer/Footer";
+// import Image from"../Home/d4.png";
+
+// const Tours = ({cruise}) => {
+//   const [tours, setTours] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   const dummyData = [
+//     {
+//       departure: "Miami",
+//       destination: "Florida",
+//       duration: "2N/3D",
+//       embarkation: "Jan 13th, 4:30 PM",
+//       disembarkation: "Jan 17th, 7:30 PM",
+//       ports: ["Miami", "Florida"],
+//       price: 200,
+//       days: [
+//         {
+//           dayNumber: 1,
+//           title: "Miami Port",
+//           subtitle: "WELCOME ONBOARD",
+//           description:
+//             "Just as you step aboard the Empress—the top cruise in India—also known as 'A City on the Sea,' you'll be greeted with a warm welcome. Once settled, dive right in and explore the many offerings lined up for you aboard our cruise ship.",
+//         },
+//         {
+//           dayNumber: 2,
+//           title: "At Sea",
+//           subtitle: "DAY AT SEA",
+//           description:
+//             "Enjoy the day with luxurious amenities and endless ocean views as you sail to your destination.",
+//         },
+//         {
+//           dayNumber: 3,
+//           title: "Florida Port",
+//           subtitle: "ARRIVED IN FLORIDA",
+//           description:
+//             "Dock at Florida Port and explore beautiful beaches, unique attractions, and vibrant culture.",
+//         },
+//       ],
+//     },
+//   ];
+
+//   useEffect(() => {
+//     const fetchTours = async () => {
+//       try {
+//         const response = await fetch("https://api.example.com/tours");
+//         if (!response.ok) throw new Error("Failed to fetch tours data");
+//         const data = await response.json();
+
+//         // Map API data to match dummy data structure
+//         const formattedData = data.map((tour) => ({
+//           departure: tour.departure || "Unknown Departure",
+//           destination: tour.destination || "Unknown Destination",
+//           duration: tour.duration || "N/A",
+//           embarkation: tour.embarkation || "N/A",
+//           disembarkation: tour.disembarkation || "N/A",
+//           ports: tour.ports || [],
+//           price: tour.price || 0,
+//           days: tour.days?.map((day, index) => ({
+//             dayNumber: day.dayNumber || index + 1,
+//             title: day.title || "Untitled",
+//             subtitle: day.subtitle || "No Subtitle",
+//             description: day.description || "No Description",
+//           })) || [],
+//         }));
+
+//         setTours(formattedData);
+//       } catch (error) {
+//         setError(error.message);
+//         setTours(dummyData); // Fallback to dummy data
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchTours();
+//   }, []);
+
+//   const handleBookNow = (id) => {
+//     alert(`Booking tour with ID: ${id}`);
+//   };
+
+//   if (loading) return <div className="loading">Loading...</div>;
+//   return (
+//     <div>
+//        <Header />
+//        <img 
+//                 src={Image}
+//                 alt="Tours Banner"
+//                 className="page-title"
+//             />
+//         <div className="tours-page">
+           
+          
+//         {error && <p className="error">Error: {error}</p>}
+//         {tours.map((tour, index) => (
+//           <div key={index} className="tour-section">
+//             {/* Details Section */}
+//             <div className="details-section shadow">
+//               <div className="details-content">
+//                 {/* Left Side: Tour Details */}
+//                 <div className="details-left">
+//                   <div className="tour-info">
+//                     <h2>
+//                       {tour.departure} <span className="arrow">&gt;&gt;</span>{" "}
+//                       {tour.destination} <span className="tour-duration">{tour.duration}</span>
+//                     </h2>
+//                   </div>
+//                   <div className="embarkation-disembarkation">
+//                     <p className="tour-info">
+//                       <span className="icon">🛳 </span>Embarkation:{" "}
+//                       <span className="time">{tour.embarkation}</span>
+//                     </p>
+//                     <p className="tour-info">
+//                       <span className="icon">⛴ </span>Disembarkation:{" "}
+//                       <span className="time">{tour.disembarkation}</span>
+//                     </p>
+//                   </div>
+//                   <p className="tour-info">
+//                     <strong>Visiting Ports:</strong>{" "}
+//                     {tour.ports?.length > 0
+//                       ? tour.ports.join(" | ")
+//                       : "No ports specified"}
+//                   </p>
+//                 </div>
+
+//                 {/* Vertical Divider */}
+//                 <div className="divider"></div>
+
+//                 {/* Right Side: Price and Booking */}
+//                 <div className="details-right">
+//                   <div className="details-right-content">
+//                     <div className="pricing-box">
+//                       <p className="price-label">Starting from</p>
+//                       <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
+//                       <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
+//                     </div>
+                    
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Itinerary Section */}
+//             <Itinerary days={tour.days} />
+
+//             {/* Itinerary Reviews Section */}
+//             {/* <ItineraryReviewsPage /> */}
+            
+//           </div>
+//         ))}
+//       </div>
+//       <ItineraryReviewsPage />
+            
+      
+//       <div><Footer /></div>
+//     </div>
+
+
+//   );
+// };
+
+// export default Tours;
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import Itinerary from "./Itinerary";
-import ItineraryReviewsPage from "./ItineraryReviewsPage"; // Import the file
-import "./Tour.css"; // CSS file for styling
+import ItineraryReviewsPage from "./ItineraryReviewsPage";
+import "./Tour.css";
 import { Head, Link, useForm } from '@inertiajs/react';
-import Header from "../../components/Common/Header/Header"; // Importing Header component
+import Header from "../../components/Common/Header/Header";
 import Footer from "../../components/Common/Footer/Footer";
-import Image from"../Home/d4.png";
+import Image from "../Home/d4.png";
 
-const Tours = () => {
+const Tours = ({ cruise }) => {
   const [tours, setTours] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const dummyData = [
-    {
-      departure: "Miami",
-      destination: "Florida",
-      duration: "2N/3D",
-      embarkation: "Jan 13th, 4:30 PM",
-      disembarkation: "Jan 17th, 7:30 PM",
-      ports: ["Miami", "Florida"],
-      price: 200,
-      days: [
-        {
-          dayNumber: 1,
-          title: "Miami Port",
-          subtitle: "WELCOME ONBOARD",
-          description:
-            "Just as you step aboard the Empress—the top cruise in India—also known as 'A City on the Sea,' you'll be greeted with a warm welcome. Once settled, dive right in and explore the many offerings lined up for you aboard our cruise ship.",
-        },
-        {
-          dayNumber: 2,
-          title: "At Sea",
-          subtitle: "DAY AT SEA",
-          description:
-            "Enjoy the day with luxurious amenities and endless ocean views as you sail to your destination.",
-        },
-        {
-          dayNumber: 3,
-          title: "Florida Port",
-          subtitle: "ARRIVED IN FLORIDA",
-          description:
-            "Dock at Florida Port and explore beautiful beaches, unique attractions, and vibrant culture.",
-        },
-      ],
-    },
-  ];
-
   useEffect(() => {
-    const fetchTours = async () => {
-      try {
-        const response = await fetch("https://api.example.com/tours");
-        if (!response.ok) throw new Error("Failed to fetch tours data");
-        const data = await response.json();
-
-        // Map API data to match dummy data structure
-        const formattedData = data.map((tour) => ({
-          departure: tour.departure || "Unknown Departure",
-          destination: tour.destination || "Unknown Destination",
-          duration: tour.duration || "N/A",
-          embarkation: tour.embarkation || "N/A",
-          disembarkation: tour.disembarkation || "N/A",
-          ports: tour.ports || [],
-          price: tour.price || 0,
-          days: tour.days?.map((day, index) => ({
-            dayNumber: day.dayNumber || index + 1,
-            title: day.title || "Untitled",
-            subtitle: day.subtitle || "No Subtitle",
-            description: day.description || "No Description",
-          })) || [],
-        }));
-
-        setTours(formattedData);
-      } catch (error) {
-        setError(error.message);
-        setTours(dummyData); // Fallback to dummy data
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchTours();
-  }, []);
+    console.log("Cruise data:", cruise);
+    if (Array.isArray(cruise)) {
+      setTours(cruise);
+    } else if (typeof cruise === "object" && cruise !== null) {
+      setTours([cruise]); // Wrap object in an array
+    } else {
+      setError("Invalid data format");
+      setTours([]);
+    }
+  }, [cruise]);
 
   const handleBookNow = (id) => {
     alert(`Booking tour with ID: ${id}`);
@@ -349,80 +466,55 @@ const Tours = () => {
   if (loading) return <div className="loading">Loading...</div>;
   return (
     <div>
-       <Header />
-       <img 
-                src={Image}
-                alt="Tours Banner"
-                className="page-title"
-            />
-        <div className="tours-page">
-           
-          
+      <Header />
+      <img src={Image} alt="Tours Banner" className="page-title" />
+      <div className="tours-page">
         {error && <p className="error">Error: {error}</p>}
-        {tours.map((tour, index) => (
-          <div key={index} className="tour-section">
-            {/* Details Section */}
-            <div className="details-section shadow">
-              <div className="details-content">
-                {/* Left Side: Tour Details */}
-                <div className="details-left">
-                  <div className="tour-info">
-                    <h2>
-                      {tour.departure} <span className="arrow">&gt;&gt;</span>{" "}
-                      {tour.destination} <span className="tour-duration">{tour.duration}</span>
-                    </h2>
-                  </div>
-                  <div className="embarkation-disembarkation">
-                    <p className="tour-info">
-                      <span className="icon">🛳 </span>Embarkation:{" "}
-                      <span className="time">{tour.embarkation}</span>
-                    </p>
-                    <p className="tour-info">
-                      <span className="icon">⛴ </span>Disembarkation:{" "}
-                      <span className="time">{tour.disembarkation}</span>
-                    </p>
-                  </div>
-                  <p className="tour-info">
-                    <strong>Visiting Ports:</strong>{" "}
-                    {tour.ports?.length > 0
-                      ? tour.ports.join(" | ")
-                      : "No ports specified"}
-                  </p>
-                </div>
-
-                {/* Vertical Divider */}
-                <div className="divider"></div>
-
-                {/* Right Side: Price and Booking */}
-                <div className="details-right">
-                  <div className="details-right-content">
-                    <div className="pricing-box">
-                      <p className="price-label">Starting from</p>
-                      <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
-                      <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
+        {tours.length > 0 ? (
+          tours.map((tour, index) => (
+            <div key={index} className="tour-section">
+              <div className="details-section shadow">
+                <div className="details-content">
+                  <div className="details-left">
+                    <div className="tour-info">
+                      <h2>
+                        {tour.departure} <span className="arrow">&gt;&gt;</span> {tour.destination} <span className="tour-duration">{tour.duration}</span>
+                      </h2>
                     </div>
-                    
+                    <div className="embarkation-disembarkation">
+                      <p className="tour-info">
+                        <span className="icon">🛳 </span>Embarkation: <span className="time">{tour.embarkation}</span>
+                      </p>
+                      <p className="tour-info">
+                        <span className="icon">⛴ </span>Disembarkation: <span className="time">{tour.disembarkation}</span>
+                      </p>
+                    </div>
+                    <p className="tour-info">
+                      <strong>Visiting Ports:</strong> {tour.ports?.length > 0 ? tour.ports.join(" | ") : "No ports specified"}
+                    </p>
+                  </div>
+                  <div className="divider"></div>
+                  <div className="details-right">
+                    <div className="details-right-content">
+                      <div className="pricing-box">
+                        <p className="price-label">Starting from</p>
+                        <p className="price-value">${tour.price?.toLocaleString() || "N/A"}</p>
+                        <p className="tax-info">Excl. Tax Per Person in Double Occupancy</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <Itinerary days={tour.days} />
             </div>
-
-            {/* Itinerary Section */}
-            <Itinerary days={tour.days} />
-
-            {/* Itinerary Reviews Section */}
-            {/* <ItineraryReviewsPage /> */}
-            
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No tours available</p>
+        )}
       </div>
       <ItineraryReviewsPage />
-            
-      
-      <div><Footer /></div>
+      <Footer />
     </div>
-
-
   );
 };
 

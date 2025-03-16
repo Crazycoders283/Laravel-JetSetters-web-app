@@ -76,8 +76,8 @@ class PackagesController extends Controller
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
-            'IternaryList' => $IternaryList,
             'phpVersion' => PHP_VERSION,
+            'IternaryList' => $IternaryList,
         ]);
     }
 

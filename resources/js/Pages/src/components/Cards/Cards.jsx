@@ -53,12 +53,13 @@ const cardsData = [
 
 ];
 
-const App = () => {
+const App = ({data}) => {
+  // console.log(data,'cardsDatacardsDatacardsDatacardsData')
   return (
     <div className="main-container">
 
       <div className="card-grid">
-        {cardsData.map((card) => (
+        {data.map((card) => (
           <div className="card" key={card.id}>
             <div className="image-container">
               <img src={card.image} alt={card.title} className="card-image" />

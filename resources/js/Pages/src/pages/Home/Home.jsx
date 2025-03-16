@@ -72,7 +72,8 @@ const cruises = [
   },
 ];
 
-const Home = () => {
+const Home = ({IternaryList}) => {
+  // console.error(IternaryList,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
   return (
     <>
       <Banner />
@@ -91,7 +92,7 @@ const Home = () => {
               </div>
             </Col>
           </Row>
-          <Cards data={destinations} />
+          <Cards data={IternaryList} />
         </Container>
       </section>
       <div className="explore-more-container">
@@ -118,7 +119,7 @@ const Home = () => {
               </div>
             </Col>
           </Row>
-          <Cards data={cruises} />
+          <Cards data={IternaryList} />
         </Container>
       </section>
       <div className="explore-more-container10">

@@ -4,7 +4,8 @@ import Banner from './src/components/Banner/Banner';
 import Footer from "./src/components/Common/Footer/Footer";
 import Home from "./src/pages/Home/Home";
 
-export default function Welcome({ auth, laravelVersion, phpVersion }) {
+export default function Welcome({ auth, laravelVersion, phpVersion,IternaryList }) {
+    console.log(IternaryList,'kkkkkkkkkkkkkkkkkkkkk')
     const handleImageError = () => {
         document
             .getElementById('screenshot-container')
@@ -27,7 +28,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
             {/* Banner Section */}
 
             {/* Home Section */}
-            <Home />
+            <Home IternaryList={IternaryList} />
 
             {/* Footer Section */}
             <Footer />
