@@ -1,10 +1,10 @@
 import React from 'react'
 import Lightroom from 'react-lightbox-gallery'
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
+import GalleryImg1 from "../../../assets/images/gallery/g1.jpg"
+import GalleryImg3 from "../../../assets/images/gallery/g3.jpg"
+import GalleryImg4 from "../../../assets/images/gallery/g3.jpg"
+import GalleryImg6 from "../../../assets/images/gallery/g6.jpg"
+import GalleryImg7 from "../../../assets/images/gallery/g7.jpg"
 
 
 const Gallery = () => {

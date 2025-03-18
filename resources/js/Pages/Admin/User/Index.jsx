@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+// import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Link } from '@inertiajs/react';
 import { usePage } from "@inertiajs/react";
 
@@ -14,7 +14,7 @@ const UserTable = () => {
         }
     }, [flash]);
     return (
-        <AuthenticatedLayout>
+        <>
             <div className="p-6 bg-white shadow rounded-lg">
                 <h2 className="text-lg font-semibold mb-4">Users</h2>
                 <h2 className="text-lg font-semibold mb-4" ><Link href={route('admin.user.create')}>Create</Link></h2>
@@ -44,7 +44,7 @@ const UserTable = () => {
                     </tbody>
                 </table>
             </div>
-        </AuthenticatedLayout>
+         </>
     );
 };
 

@@ -1,4 +1,4 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+// import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import { useState } from "react";
 import axios from "axios";
@@ -38,7 +38,7 @@ export default function Dashboard() {
     };
 
     return (
-        <AuthenticatedLayout>
+        <>
             <Head title="User Create" />
             <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg">
                 <div className="mb-4">
@@ -75,7 +75,7 @@ export default function Dashboard() {
 
                 <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded">Submit</button>
             </form>
-        </AuthenticatedLayout>
+        </>
 
     );
 }

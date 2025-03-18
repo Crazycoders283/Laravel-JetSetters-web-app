@@ -1,8 +1,8 @@
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
-import GuestLayout from '@/Layouts/GuestLayout';
+import InputError from '../../Components/InputError';
+import InputLabel from '../../Components/InputLabel';
+import PrimaryButton from '../../Components/PrimaryButton';
+import TextInput from '../../Components/TextInput';
+import GuestLayout from '../../Layouts/GuestLayout';
 import { Head, useForm } from '@inertiajs/react';
 
 export default function ConfirmPassword() {
@@ -41,7 +41,7 @@ export default function ConfirmPassword() {
                         onChange={(e) => setData('password', e.target.value)}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    {/* <InputError message={errors.password} className="mt-2" /> */}
                 </div>
 
                 <div className="mt-4 flex items-center justify-end">
