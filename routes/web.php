@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FlightSController;
 use App\Http\Controllers\FlightExploreMoreControoller;
 use App\Http\Controllers\PaymentDetailsController;
+use App\Http\Controllers\RentalController;
 use App\Http\Conntrollers\HomeController;
 
 // Route::get('/', function () {
@@ -28,6 +29,10 @@ use App\Http\Conntrollers\HomeController;
 Route::get('/', [PackagesController::class, 'home'])->name('home');
 Route::get('/packages', [PackagesController::class, 'index'])->name('package_index');
 Route::get('/booking', [BookingController::class, 'index'])->name('booking_index');
+Route::get('/rentals', [RentalController::class, 'index'])->name('rental_index');
+Route::get('/rentals/hotel-details', [RentalController::class, 'show'])->name('hotel_details_show');
+
+Route::get('/rentals/hotel-details/booking', [RentalController::class, 'booking'])->name('hotel_booking');
 Route::get('/booking/booknow', [BookingNowController::class, 'index'])->name('booking_now');
 Route::get('/packages/itinerary', [PackageBookingController::class, 'index'])->name('package_itinerary');
 Route::get('/packages/itinerary/booking', [PackageItineraryBooknowController::class, 'index'])->name('package_itinerary_booking');
@@ -44,7 +49,9 @@ Route::get('admin/dashboard', function () {
 Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
     Route::resource('/user', UserController::class);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::match(['put', 'post'], '/admin/profile', [ProfileController::class, 'update'])->name('profile.update');
+
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 

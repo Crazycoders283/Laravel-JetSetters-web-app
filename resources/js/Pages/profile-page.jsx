@@ -1,15 +1,15 @@
 "use client"
 
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import { useForm } from "@inertiajs/react"
 
-export default function Edit({ auth }) {
+export default function ProfilePage({ user }) {
   const fileInputRef = useRef(null)
-  const user = auth?.user || {}
 
   const {
     data,
     setData,
+    post,
     put,
     processing,
     errors,
@@ -35,11 +35,8 @@ export default function Edit({ auth }) {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    put(route("admin.profile.update"), {
-      ...data
-    }, {
+    put(route("profile.update"), {
       preserveScroll: true,
-      forceFormData: true, // Important for file upload!
       onSuccess: () => {
         console.log("Profile updated!")
       },
@@ -49,6 +46,7 @@ export default function Edit({ auth }) {
   return (
     <form onSubmit={handleSubmit} encType="multipart/form-data" className="min-h-screen bg-[#f0f7fc]">
       <main className="container mx-auto p-4 max-w-4xl">
+        {/* Profile Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <div className="flex flex-col items-center">
@@ -75,9 +73,11 @@ export default function Edit({ auth }) {
           </div>
         </div>
 
+        {/* Personal Info Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <h2 className="text-xl font-bold mb-6">Personal Information</h2>
 
+          {/* Gender Buttons */}
           <div className="mb-6">
             <label className="block text-gray-700 mb-2">Gender</label>
             <div className="flex space-x-4">
@@ -94,17 +94,53 @@ export default function Edit({ auth }) {
             </div>
           </div>
 
+          {/* Input Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input type="text" placeholder="Mobile Number" value={data.mobile_number} onChange={(e) => setData("mobile_number", e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md" />
-            <input type="email" placeholder="Email" value={data.email} onChange={(e) => setData("email", e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md" />
-            <input type="text" placeholder="First Name" value={data.first_name} onChange={(e) => setData("first_name", e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md" />
-            <input type="text" placeholder="Last Name" value={data.last_name} onChange={(e) => setData("last_name", e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md" />
-            <input type="date" placeholder="Date of Birth" value={data.date_of_birth} onChange={(e) => setData("date_of_birth", e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md md:col-span-2" />
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              value={data.mobile_number}
+              onChange={(e) => setData("mobile_number", e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={data.email}
+              onChange={(e) => setData("email", e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input
+              type="text"
+              placeholder="First Name"
+              value={data.first_name}
+              onChange={(e) => setData("first_name", e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              value={data.last_name}
+              onChange={(e) => setData("last_name", e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input
+              type="date"
+              placeholder="Date of Birth"
+              value={data.date_of_birth}
+              onChange={(e) => setData("date_of_birth", e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md md:col-span-2"
+            />
           </div>
 
+          {/* Buttons */}
           <div className="flex space-x-4 mt-6">
-            <button type="submit" disabled={processing} className="px-8 py-2 bg-[#006d92] text-white rounded-md hover:bg-[#005a7a] transition">Save</button>
-            <button type="button" onClick={() => reset()} className="px-8 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition">Cancel</button>
+            <button type="submit" disabled={processing} className="px-8 py-2 bg-[#006d92] text-white rounded-md hover:bg-[#005a7a] transition">
+              Save
+            </button>
+            <button type="button" onClick={() => reset()} className="px-8 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition">
+              Cancel
+            </button>
           </div>
         </div>
       </main>

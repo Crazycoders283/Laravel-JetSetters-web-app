@@ -66,7 +66,7 @@ const Header = () => {
                 <Link className="nav-link" href={route('home')}>Cruise</Link>
                 <Link className="nav-link" href={route('flights_index')}>Flights</Link>
                 <Link className="nav-link" href={route('package_index')}>Packages</Link>
-                <NavLink className="nav-link" to="/">Rentals</NavLink>
+                <Link className="nav-link"href={route('rental_index')}>Rentals</Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
